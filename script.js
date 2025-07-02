@@ -10,7 +10,7 @@ function showSection(id, element) {
 }
 
 // Typing effect
-const roles = ["an AI developer", "a Web developer", "a Thinker, a Feeler, and a quiet Fighter"];
+const roles = ["an AI Developer", "a Sporty Guy", "a Thoughful Reader"];
 let index = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -20,7 +20,6 @@ function typeLoop() {
   const currentText = roles[index];
   const isComplete = charIndex === currentText.length;
 
-  // Hiển thị văn bản + dấu gạch |
   typingEl.innerHTML = currentText.substring(0, charIndex) + '<span class="cursor">|</span>';
 
   if (!isDeleting) {
@@ -68,33 +67,29 @@ function toggleReadMore() {
   }
 }
 
-//Effect chuyển cảnh
+//Effect chuyển cảnh fade
 function showSection(id, el) {
   const sections = document.querySelectorAll('.section');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Ẩn tất cả sections với hiệu ứng fade out
   sections.forEach(section => {
     section.classList.remove('visible');
     setTimeout(() => {
       section.classList.add('hidden');
-    }, 500); // thời gian trùng với transition 0.5s
+    }, 500); 
   });
 
-  // Xóa class active khỏi tất cả nav links
   navLinks.forEach(link => link.classList.remove('active'));
 
-  // Kích hoạt nav link hiện tại
   if (el.classList.contains('nav-link')) {
     el.classList.add('active');
   }
 
-  // Hiển thị section được chọn với fade in
   const target = document.getElementById(id);
   if (target) {
     setTimeout(() => {
       target.classList.remove('hidden');
       target.classList.add('visible');
-    }, 500); // delay hiển thị sau khi fade out xong
+    }, 500);
   }
 }
