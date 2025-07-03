@@ -22,10 +22,11 @@
   </header>
 
   <main>
+    <!-- Mục home -->
     <section id="home" class="section visible">
       <div class="home-container">
         <div class="avatar">
-          <img src="Ảnh/Ảnh avatar.png" alt="My Avatar">
+          <img src="Ảnh/Ảnh avatar.png" alt="My Avatar" class="zoomable-image">
         </div>
         <div class="intro">
           <h2 class="hello-text">Hello, I'm</h2>
@@ -34,39 +35,478 @@
           <p class="bio">
             I am someone who finds joy in coding and building things with logic, but that does not mean I am rigid. I enjoy exploring the worlds that books open for me, seeing life through the lens of different writers. I love playing football and basketball, feeling alive with every game and every run. I am curious about the world and I want to experience as many things as I can, growing with every challenge and adventure I take on.
           </p>
+          <a href="https://drive.google.com/file/d/1mRbvH-9CTPXiqhRGuhpE5QMlTeiLBuvq/view?usp=drive_link"
+          target="_blank"
+          class="resume-button">
+            View my resume
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- Mục about me -->
     <section id="about" class="section hidden">
       <h2>About Me</h2>
-      <p>Giới thiệu bản thân... lmao</p>
+      <div class="about-content">
+        <p>
+          I’m Thiều Quang Tâm, currently a 12th-grade Math student at High School for the Gifted, VNUHCM. With a passion for science and technology, I love diving into coding projects, developing AI applications, and solving challenging problems. Beyond academics, I find joy in sports, reading, and engaging in meaningful social projects.
+        </p>
+        <p>
+          I always strive to grow through every opportunity, whether it's leading a team, building a project, or helping others learn. I believe in the power of sharing knowledge and making a positive impact through technology and education.
+        </p>
+      </div>
     </section>
 
+    <!-- Mục achievements -->
     <section id="achievements" class="section hidden">
       <h2>Achievements</h2>
-      <ul>
-        <li>Thành tích 1</li>
-        <li>Thành tích 2</li>
-      </ul>
+      
+      <!-- Stats Overview -->
+      <div class="stats-grid">
+        <!-- <div class="stat-card">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Awards</div>
+        </div> -->
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Medals</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Special Prizes</div>
+        </div>
+        <!-- <div class="stat-card">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Competition Areas</div>
+        </div> -->
+      </div>
+
+      <!-- Timeline -->
+      <div class="achievements-timeline">
+        <!-- AI & Innovation -->
+        <div class="achievement-item">
+          <div class="achievement-content">
+            <div class="achievement-category">AI & Innovation</div>
+            <h3 class="achievement-title">Leading AI Innovation</h3>
+            <p class="achievement-description">
+              Breakthrough achievements in artificial intelligence and medical technology, developing cutting-edge solutions for healthcare applications.
+            </p>
+            <div class="achievement-awards">
+              <div class="award-badge">
+                <span class="award-icon">🏆</span>
+                <span class="award-text">Special Prize (Best Overall, highest award)</span>
+              </div>
+              <div class="award-badge">
+                <span class="award-icon">🤖</span>
+                <span class="award-text">AI Model Development</span>
+              </div>
+            </div>
+            <div class="achievement-images">
+              <div class="achievement-image">
+                <img src="Ảnh\bmei.jpg" alt="BME Innovation Award" class="zoomable-image">
+              </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
+              <strong>BME Innovation Competition 2025</strong><br>
+              AI model for detecting respiratory diseases from lung sounds
+            </p>
+          </div>
+        </div>
+
+        <!-- Computer Science -->
+        <div class="achievement-item">
+          <div class="achievement-content">
+            <div class="achievement-category">Computer Science</div>
+            <h3 class="achievement-title">Algorithmic Excellence</h3>
+            <p class="achievement-description">
+              Demonstrated exceptional problem-solving skills in competitive programming and algorithmic challenges at regional level.
+            </p>
+            <div class="achievement-awards">
+              <div class="award-badge">
+                <span class="award-icon">🎖️</span>
+                <span class="award-text">Honorable Mention</span>
+              </div>
+              <div class="award-badge">
+                <span class="award-icon">⚡</span>
+                <span class="award-text">C++ & Data Structures</span>
+              </div>
+            </div>
+            <div class="achievement-images">
+              <div class="achievement-image">
+                <img src="Ảnh/achievements/olympic_tin.png" alt="Olympic Tin Hoc Certificate" class="zoomable-image">
+              </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
+              <strong>Olympic Tin học Miền Trung & Tây Nguyên 2025</strong><br>
+              Algorithmic problem solving with advanced data structures
+            </p>
+          </div>
+        </div>
+
+        <!-- International Mathematics -->
+        <div class="achievement-item">
+          <div class="achievement-content">
+            <div class="achievement-category">Mathematics</div>
+            <h3 class="achievement-title">International Recognition</h3>
+            <p class="achievement-description">
+              Achieving top honors in prestigious international mathematics competitions, competing against the world's brightest minds.
+            </p>
+            <div class="achievement-awards">
+              <div class="award-badge">
+                <span class="award-icon">🥇</span>
+                <span class="award-text">Gold Medal</span>
+              </div>
+              <div class="award-badge">
+                <span class="award-icon">🌏</span>
+                <span class="award-text">International Competition</span>
+              </div>
+            </div>
+            <div class="achievement-images">
+              <div class="achievement-image">
+                <img src="Ảnh/achievements/philippines_olympiad.png" alt="Philippines Olympiad" class="zoomable-image">
+              </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
+              <strong>Philippines International Math and Science Olympiad 2024</strong><br>
+              First place among international participants
+            </p>
+          </div>
+        </div>
+
+        <!-- Science Olympiads -->
+        <div class="achievement-item">
+          <div class="achievement-content">
+            <div class="achievement-category">Science & Math</div>
+            <h3 class="achievement-title">Consistent Excellence</h3>
+            <p class="achievement-description">
+              Multiple bronze medals in prestigious Asian science and mathematics competitions, showcasing consistent high-level performance.
+            </p>
+            <div class="achievement-awards">
+              <div class="award-badge">
+                <span class="award-icon">🥉</span>
+                <span class="award-text">Bronze Medal</span>
+              </div>
+              <div class="award-badge">
+                <span class="award-icon">🔬</span>
+                <span class="award-text">Multiple Competitions</span>
+              </div>
+            </div>
+            <div class="achievement-images">
+              <div class="achievement-image">
+                <img src="Ảnh/achievements/asmopss.png" alt="ASMOPSS Award" class="zoomable-image">
+              </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
+              <strong>Asian Science and Mathematics Olympiad 2023</strong><br>
+              <strong>Brilliance Intelligence Students Olympiad 2024</strong><br>
+              Consistent performance across multiple disciplines
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
+
+    <!-- Mục projects -->
     <section id="projects" class="section hidden">
       <h2>My Projects</h2>
       <p>Dự án...</p>
     </section>
 
+    <!-- Mục leadership -->
     <section id="leadership" class="section hidden">
       <h2>Leadership & Activities</h2>
-      <p>Các hoạt động tham gia...</p>
+      
+      <!-- Introduction -->
+      <div class="leadership-intro">
+        <p>Beyond academics, I'm passionate about creating positive impact through leadership and community service. Here's how I've been making a difference:</p>
+      </div>
+
+      <!-- Leadership Timeline -->
+      <div class="leadership-timeline">
+        
+        <!-- Generous Soul United -->
+        <div class="leadership-item">
+          <div class="leadership-content">
+            <div class="leadership-header">
+              <div class="role-badge founder">Founder</div>
+              <div class="leadership-title">Generous Soul United</div>
+              <div class="leadership-period">March 2024 – Present</div>
+            </div>
+            
+            <div class="leadership-description">
+              <p>Leading digital empowerment initiatives for underprivileged children, bridging the technology gap through structured computer literacy programs.</p>
+              
+              <div class="achievements-list">
+                <div class="achievement-point">
+                  <span class="achievement-icon">🎓</span>
+                  <span>Delivered 3+ months of computer literacy lessons at Tan Binh Shelter and Dieu Giac Orphanage</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">📚</span>
+                  <span>Created accessible, structured learning plans tailored to children's needs</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">💻</span>
+                  <span>Fostered digital empowerment culture among children with limited technology access</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="leadership-gallery">
+              <div class="gallery-placeholder">
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Teaching Session</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Kids Learning</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Group Activity</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sci for Good Guide -->
+        <div class="leadership-item">
+          <div class="leadership-content">
+            <div class="leadership-header">
+              <div class="role-badge vice-president">Vice President</div>
+              <div class="leadership-title">Sci for Good Guide</div>
+              <div class="leadership-period">March 2024 – Present</div>
+            </div>
+            
+            <div class="leadership-description">
+              <p>Simplifying scientific knowledge for Vietnamese youth through engaging content and strategic communication.</p>
+              
+              <div class="achievements-list">
+                <div class="achievement-point">
+                  <span class="achievement-icon">🧪</span>
+                  <span>Led initiatives to communicate scientific knowledge through visually appealing posts</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">📊</span>
+                  <span>Oversaw content strategy ensuring consistency and clarity across platforms</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">🌱</span>
+                  <span>Cultivated love for science within the Vietnamese youth community</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="leadership-gallery">
+              <div class="gallery-placeholder">
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Content Creation</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Team Meeting</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Science Posts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tram Chuyen Cap 25:28 -->
+        <div class="leadership-item">
+          <div class="leadership-content">
+            <div class="leadership-header">
+              <div class="role-badge head-academic">Head of Academic</div>
+              <div class="leadership-title">Tram Chuyen Cap 25:28</div>
+              <div class="leadership-period">August 2024 – Present</div>
+            </div>
+            
+            <div class="leadership-description">
+              <p>Empowering 9th-grade students through comprehensive academic support and exam preparation programs.</p>
+              
+              <div class="achievements-list">
+                <div class="achievement-point">
+                  <span class="achievement-icon">👥</span>
+                  <span>Organized workshops for 100+ participants preparing for high school entrance exams</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">📐</span>
+                  <span>Taught Mathematics to 150+ students, focusing on foundational skills and confidence</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">📝</span>
+                  <span>Developed mock examinations to simulate real test conditions and build exam strategies</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="leadership-gallery">
+              <div class="gallery-placeholder">
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Workshop Session</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Math Teaching</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Mock Exam</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Student Group</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PTNK Science Community -->
+        <div class="leadership-item">
+          <div class="leadership-content">
+            <div class="leadership-header">
+              <div class="role-badge vice-president">Vice-President</div>
+              <div class="leadership-title">PTNK Science Community</div>
+              <div class="leadership-subtitle">I (Informative) House</div>
+              <div class="leadership-period">June 2024 – Present</div>
+            </div>
+            
+            <div class="leadership-description">
+              <p>Bridging science education with community service through innovative workshops and educational initiatives.</p>
+              
+              <div class="achievements-list">
+                <div class="achievement-point">
+                  <span class="achievement-icon">🔬</span>
+                  <span>Curated workshop series on natural elements (Fire, Water, Earth, Light) for 100+ participants</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">🤖</span>
+                  <span>Led AI concept workshops while coordinating book donation drives</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">📚</span>
+                  <span>Promoted educational equity for middle school students in Ca Mau City</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="leadership-gallery">
+              <div class="gallery-placeholder">
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Science Workshop</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>AI Presentation</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Book Donation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUGAR Vietnam -->
+        <div class="leadership-item">
+          <div class="leadership-content">
+            <div class="leadership-header">
+              <div class="role-badge organizer">Organizing Committee</div>
+              <div class="leadership-title">SUGAR Vietnam – Big Summer Trip</div>
+              <div class="leadership-subtitle">External Relations Department</div>
+              <div class="leadership-period">January 2025 – Present</div>
+            </div>
+            
+            <div class="leadership-description">
+              <p>Leading large-scale fundraising and community outreach initiatives to support underprivileged children across Vietnam.</p>
+              
+              <div class="achievements-list">
+                <div class="achievement-point">
+                  <span class="achievement-icon">💰</span>
+                  <span>Secured 40+ million VND through merchandise sales and sponsorships</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">🏠</span>
+                  <span>Coordinated visits to 4+ shelters with interactive educational activities</span>
+                </div>
+                <div class="achievement-point">
+                  <span class="achievement-icon">🎯</span>
+                  <span>Delivered educational and recreational experiences to underprivileged children</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="leadership-gallery">
+              <div class="gallery-placeholder">
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Fundraising Event</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Shelter Visit</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Activity Session</p>
+                </div>
+                <div class="photo-slot">
+                  <span class="photo-icon">📸</span>
+                  <p>Team Photo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Impact Summary -->
+      <div class="impact-summary">
+        <h3>Impact by Numbers</h3>
+        <div class="impact-grid">
+          <div class="impact-card">
+            <div class="impact-number">500+</div>
+            <div class="impact-label">Students Reached</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-number">40M+</div>
+            <div class="impact-label">VND Raised</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-number">10+</div>
+            <div class="impact-label">Organizations</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-number">5</div>
+            <div class="impact-label">Leadership Roles</div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Mục my little -->
     <section id="corner" class="section hidden">
       <h2>My Little Corner</h2>
       <p>My hobbies :>...</p>
     </section>
   </main>
 
+  <div id="image-modal" class="image-modal hidden">
+    <span class="close-button">&times;</span> 
+    <img class="modal-content" id="modal-img" />
+  </div>
 
   <script src="script.js"></script>
 </body>
