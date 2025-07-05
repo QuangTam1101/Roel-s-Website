@@ -12,7 +12,6 @@
     <div class="logo"><span class="highlight">Roel's</span> Website</div>
     <nav>
       <ul>
-        <li class="nav-link home" onclick="showSection('home', this)">Home</li>
         <li class="nav-link about" onclick="showSection('about', this)">About Me</li>
         <li class="nav-link achievements" onclick="showSection('achievements', this)">Achievements</li>
         <li class="nav-link projects" onclick="showSection('projects', this)">My Projects</li>
@@ -23,8 +22,8 @@
   </header>
 
   <main>
-    <!-- Mục home -->
-    <section id="home" class="section visible">
+    <!-- Mục About me -->
+    <section id="about" class="section visible">
       <div class="home-container">
         <div class="avatar">
           <img src="Ảnh/Ảnh avatar.png" alt="My Avatar" class="zoomable-image">
@@ -43,10 +42,8 @@
           </a>
         </div>
       </div>
-    </section>
-    
-    <!-- Mục about me -->
-    <section id="about" class="section hidden">
+
+      <!-- Original About me content -->
       <div class="sky">
         <div class="stars"></div>
         <div class="stars1"></div>
@@ -76,7 +73,7 @@
                   <div class="roel-title">ROEL</div>
                   <div class="roel-meaning">Roof Of Elon</div>
                   <div class="roel-explanation">
-                      That energy? That unapologetic, moonshot thinking? That’s what Roel means to me. The name Roel stands for "Roof of Elon." It’s my way of saying I looked up to him so much, I wanted to stand on top of that inspiration - to build on it, to aim even higher.
+                      That energy? That unapologetic, moonshot thinking? That's what Roel means to me. The name Roel stands for "Roof of Elon." It's my way of saying I looked up to him so much, I wanted to stand on top of that inspiration - to build on it, to aim even higher.
                   </div>
               </div>
               
@@ -93,33 +90,25 @@
       
       <!-- Stats Overview -->
       <div class="stats-grid">
-        <!-- <div class="stat-card">
-          <div class="stat-number">5</div>
-          <div class="stat-label">Awards</div>
-        </div> -->
         <div class="stat-card">
           <div class="stat-number">3</div>
           <div class="stat-label">Medals</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">2</div>
-          <div class="stat-label">Special Prizes</div>
+          <div class="stat-label">Prizes</div>
         </div>
-        <!-- <div class="stat-card">
-          <div class="stat-number">4</div>
-          <div class="stat-label">Competition Areas</div>
-        </div> -->
       </div>
 
       <!-- Timeline -->
       <div class="achievements-timeline">
-        <!-- AI & Innovation -->
+        <!-- BMEI -->
         <div class="achievement-item">
           <div class="achievement-content">
-            <div class="achievement-category">AI & Innovation</div>
-            <h3 class="achievement-title">Leading AI Innovation</h3>
+            <div class="achievement-category">AI & Medical Diagnostics</div>
+            <h3 class="achievement-title">BME INNOVATION COMPETITION 2025</h3>
             <p class="achievement-description">
-              Breakthrough achievements in artificial intelligence and medical technology, developing cutting-edge solutions for healthcare applications.
+              I collaborated with a research team to develop an innovative project<strong>"AI-Based Diagnosis of Respiratory Diseases via Lung Sound Analysis"</strong>, developing a machine learning model that extracts abnormal acoustic features for early disease detection. Our solution demonstrated superior accuracy compared to traditional diagnostic methods, earning the competition's <strong>highest honor</strong>.
             </p>
             <div class="achievement-awards">
               <div class="award-badge">
@@ -133,23 +122,20 @@
             </div>
             <div class="achievement-images">
               <div class="achievement-image">
-                <img src="Ảnh\bmei.jpg" alt="BME Innovation Award" class="zoomable-image">
+                <img src="Ảnh\bmei.jpg" alt="BME Innovation Competition 2025 - Grand Prize Winner" class="zoomable-image">
               </div>
             </div>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
-              <strong>BME Innovation Competition 2025</strong><br>
-              AI model for detecting respiratory diseases from lung sounds
-            </p>
           </div>
         </div>
 
-        <!-- Computer Science -->
+        <!-- OLYMPIC TIN HỌC MTTN -->
         <div class="achievement-item">
           <div class="achievement-content">
-            <div class="achievement-category">Computer Science</div>
-            <h3 class="achievement-title">Algorithmic Excellence</h3>
+            <div class="achievement-category">AI & Competitive Programming</div>
+            <h3 class="achievement-title">2025 Central Highlands Informatics Olympiad - AI ​​Challenge category</h3>
             <p class="achievement-description">
-              Demonstrated exceptional problem-solving skills in competitive programming and algorithmic challenges at regional level.
+              Competed in this prestigious AI competition involving three key domains: <strong>Machine Learning, Computer Vision, and NLP</strong>. 
+        Designed and optimized AI models based on given problem statements, advancing through rigorous elimination rounds.
             </p>
             <div class="achievement-awards">
               <div class="award-badge">
@@ -158,7 +144,7 @@
               </div>
               <div class="award-badge">
                 <span class="award-icon">⚡</span>
-                <span class="award-text">C++ & Data Structures</span>
+                <span class="award-text"><strong>Top 3</strong> in Qualifying Round</span>
               </div>
             </div>
             <div class="achievement-images">
@@ -166,29 +152,21 @@
                 <img src="Ảnh/achievements/olympic_tin.png" alt="Olympic Tin Hoc Certificate" class="zoomable-image">
               </div>
             </div>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
-              <strong>Olympic Tin học Miền Trung & Tây Nguyên 2025</strong><br>
-              Algorithmic problem solving with advanced data structures
-            </p>
           </div>
         </div>
 
-        <!-- International Mathematics -->
+        <!-- PIMSO -->
         <div class="achievement-item">
           <div class="achievement-content">
-            <div class="achievement-category">Mathematics</div>
-            <h3 class="achievement-title">International Recognition</h3>
+            <div class="achievement-category">Mathematics & Science</div>
+            <h3 class="achievement-title">Philippines International Math and Science Olympics</h3>
             <p class="achievement-description">
-              Achieving top honors in prestigious international mathematics competitions, competing against the world's brightest minds.
+              Earned a gold medal in this prestigious mathematics competition, demonstrating strong problem-solving skills in advanced mathematical concepts.
             </p>
             <div class="achievement-awards">
               <div class="award-badge">
                 <span class="award-icon">🥇</span>
                 <span class="award-text">Gold Medal</span>
-              </div>
-              <div class="award-badge">
-                <span class="award-icon">🌏</span>
-                <span class="award-text">International Competition</span>
               </div>
             </div>
             <div class="achievement-images">
@@ -196,29 +174,21 @@
                 <img src="Ảnh/achievements/philippines_olympiad.png" alt="Philippines Olympiad" class="zoomable-image">
               </div>
             </div>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
-              <strong>Philippines International Math and Science Olympiad 2024</strong><br>
-              First place among international participants
-            </p>
           </div>
         </div>
 
-        <!-- Science Olympiads -->
+        <!-- BISO -->
         <div class="achievement-item">
           <div class="achievement-content">
-            <div class="achievement-category">Science & Math</div>
-            <h3 class="achievement-title">Consistent Excellence</h3>
+            <div class="achievement-category">Mathematics & Science</div>
+            <h3 class="achievement-title">Brilliance Intelligence Students Olympiad</h3>
             <p class="achievement-description">
-              Multiple bronze medals in prestigious Asian science and mathematics competitions, showcasing consistent high-level performance.
+              Awarded bronze medals for mathematical problem-solving in this national competition, demonstrating strong analytical abilities against top student competitors.
             </p>
             <div class="achievement-awards">
               <div class="award-badge">
                 <span class="award-icon">🥉</span>
                 <span class="award-text">Bronze Medal</span>
-              </div>
-              <div class="award-badge">
-                <span class="award-icon">🔬</span>
-                <span class="award-text">Multiple Competitions</span>
               </div>
             </div>
             <div class="achievement-images">
@@ -226,13 +196,31 @@
                 <img src="Ảnh/achievements/asmopss.png" alt="ASMOPSS Award" class="zoomable-image">
               </div>
             </div>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
-              <strong>Asian Science and Mathematics Olympiad 2023</strong><br>
-              <strong>Brilliance Intelligence Students Olympiad 2024</strong><br>
-              Consistent performance across multiple disciplines
-            </p>
           </div>
         </div>
+
+        <!-- ASMO -->
+        <div class="achievement-item">
+          <div class="achievement-content">
+            <div class="achievement-category">Mathematics & Science</div>
+            <h3 class="achievement-title">Asian Science and Mathematics Olympiad</h3>
+            <p class="achievement-description">
+              Received bronze medals in Asian science and Mathematics Olympiad, showcasing consistent high-level performance in Mathematics.
+            </p>
+            <div class="achievement-awards">
+              <div class="award-badge">
+                <span class="award-icon">🥉</span>
+                <span class="award-text">Bronze Medal</span>
+              </div>
+            </div>
+            <div class="achievement-images">
+              <div class="achievement-image">
+                <img src="Ảnh/achievements/asmopss.png" alt="ASMOPSS Award" class="zoomable-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -245,11 +233,11 @@
 
     <!-- Mục leadership -->
     <section id="leadership" class="section hidden">
-      <h2>Leadership & Activities</h2>
+      <h2 class="leadership-act">Leadership & Activities</h2>
       
       <!-- Introduction -->
       <div class="leadership-intro">
-        <p>Beyond academics, I'm passionate about creating positive impact through leadership and community service. Here's how I've been making a difference:</p>
+        <p>Beyond academics, I'm passionate about creating positive impact through leadership and community service. Here's how I've been making a difference</p>
       </div>
 
       <!-- Leadership Timeline -->
@@ -286,19 +274,17 @@
             <div class="leadership-gallery">
               <div class="gallery-placeholder">
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Teaching Session</p>
+                  <img src="Ảnh\IMG_1296.JPG" class="zoomable-image" alt="Teaching Session">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Kids Learning</p>
+                  <img src="Ảnh\IMG_8926.jpg" class="zoomable-image" alt="Kids Learning">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Group Activity</p>
+                  <img src="Ảnh\IMG_3276.jpg" class="zoomable-image" alt="Group Activity">
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -333,19 +319,17 @@
             <div class="leadership-gallery">
               <div class="gallery-placeholder">
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Content Creation</p>
+                  <img src="Ảnh\IMG_5845.jpeg" class="zoomable-image" alt="Kid Playing">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Team Meeting</p>
+                  <img src="Ảnh\IMG_5441.jpg" class="zoomable-image" alt="Thank you">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Science Posts</p>
+                  <img src="Ảnh\Tập thể.jpg" class="zoomable-image" alt="Group Activity">
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -380,23 +364,18 @@
             <div class="leadership-gallery">
               <div class="gallery-placeholder">
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Workshop Session</p>
+                  <img src="Ảnh\TCC I 1.jpg" class="zoomable-image" alt="Teaching">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Math Teaching</p>
+                  <img src="Ảnh\TCC I 2.jpg" class="zoomable-image" alt="Giving advice">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Mock Exam</p>
-                </div>
-                <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Student Group</p>
+                  <img src="Ảnh\TCC I 3.jpg" class="zoomable-image" alt="Member">
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
 
@@ -432,19 +411,17 @@
             <div class="leadership-gallery">
               <div class="gallery-placeholder">
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Science Workshop</p>
+                  <img src="Ảnh\PRISEE I 1.jpg" class="zoomable-image" alt="Teaching">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>AI Presentation</p>
+                  <img src="Ảnh\PRISEE I 2.jpg" class="zoomable-image" alt="Giving advice">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Book Donation</p>
+                  <img src="Ảnh\PRISEE I 4.jpg" class="zoomable-image" alt="Member">
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -480,47 +457,23 @@
             <div class="leadership-gallery">
               <div class="gallery-placeholder">
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Fundraising Event</p>
+                  <img src="Ảnh\BST 5.JPG" class="zoomable-image" alt="Fundraising Event">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Shelter Visit</p>
+                  <img src="Ảnh\BST 4.jpg" class="zoomable-image" alt="Shelter Visit">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Activity Session</p>
+                  <img src="Ảnh\BST 3.jpg" class="zoomable-image" alt="Shelter Visit">
                 </div>
                 <div class="photo-slot">
-                  <span class="photo-icon">📸</span>
-                  <p>Team Photo</p>
+                  <img src="Ảnh\BST 2.jpg" class="zoomable-image" alt="Shelter Visit">
                 </div>
+                <div class="photo-slot">
+                  <img src="Ảnh\BST 1.JPG" class="zoomable-image" alt="Shelter Visit">
+                </div>                
               </div>
             </div>
-          </div>
-        </div>
 
-      </div>
-
-      <!-- Impact Summary -->
-      <div class="impact-summary">
-        <h3>Impact by Numbers</h3>
-        <div class="impact-grid">
-          <div class="impact-card">
-            <div class="impact-number">500+</div>
-            <div class="impact-label">Students Reached</div>
-          </div>
-          <div class="impact-card">
-            <div class="impact-number">40M+</div>
-            <div class="impact-label">VND Raised</div>
-          </div>
-          <div class="impact-card">
-            <div class="impact-number">10+</div>
-            <div class="impact-label">Organizations</div>
-          </div>
-          <div class="impact-card">
-            <div class="impact-number">5</div>
-            <div class="impact-label">Leadership Roles</div>
           </div>
         </div>
       </div>
