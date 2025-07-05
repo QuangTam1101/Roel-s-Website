@@ -13,6 +13,8 @@ body {
 /* === HEADER === */
 header {
   display: flex;
+  position: relative;
+  z-index: 100;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
@@ -131,35 +133,19 @@ nav ul {
   transform: translateY(0) scale(0.98);
 }
 
-/* Home */
-.nav-link.home {
-  background: linear-gradient(135deg, #222 0%, #2a1a1a 100%);
-}
-
-.nav-link.home:hover {
-  background: linear-gradient(135deg, #ff1744 0%, #d50000 50%, #ff1744 100%);
-  background-size: 200% 200%;
-  animation: gradientShift 2s ease infinite;
-}
-
-.nav-link.home::before {
-  background: linear-gradient(45deg, #ff1744, #d50000, #ff5722, #ff1744);
-  background-size: 300% 300%;
-}
-
 /* About Me */
 .nav-link.about {
   background: linear-gradient(135deg, #222 0%, #2a1f1a 100%);
 }
 
 .nav-link.about:hover {
-  background: linear-gradient(135deg, #ff9800 0%, #f57c00 50%, #ff9800 100%);
+  background: linear-gradient(135deg, #ff1744 0%, #d50000 50%, #ff1744 100%);
   background-size: 200% 200%;
   animation: gradientShift 2s ease infinite;
 }
 
 .nav-link.about::before {
-  background: linear-gradient(45deg, #ff9800, #f57c00, #ffab40, #ff9800);
+  background: linear-gradient(45deg, #ff1744, #d50000, #ff5722, #ff1744);
   background-size: 300% 300%;
 }
 
@@ -250,18 +236,22 @@ nav ul {
 /* === ABOUT ME === */
 
 .About-me {
+    position: relative;
+    z-index: 2;
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 60px;
-    background: linear-gradient(45deg, #ff6b35, #ff8c42, #ffa726);
+    background: linear-gradient(45deg, #ff3535, #ff4255, #ff262d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+    text-shadow: 0 0 30px rgba(255, 53, 53, 0.3);
 }
 
 .about-content {
+    position: relative;
+    z-index: 2;
     display: block;
     max-width: 900px;
     margin: 0 auto;
@@ -271,12 +261,16 @@ nav ul {
 
 .story-section {
     position: relative;
+    z-index: 2;
+    position: relative;
     text-align: left;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .story-intro {
+    position: relative;
+    z-index: 2;
     font-size: 1.1rem;
     color: #cccccc;
     margin-bottom: 30px;
@@ -285,8 +279,10 @@ nav ul {
 }
 
 .roel-origin {
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 66, 0.05));
-    border: 2px solid rgba(255, 107, 53, 0.3);
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, rgba(255, 53, 53, 0.1), rgba(255, 66, 66, 0.05));
+    border: 2px solid rgba(255, 53, 53, 0.3);
     border-radius: 20px;
     padding: 30px;
     margin: 30px 0;
@@ -301,7 +297,7 @@ nav ul {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 53, 60, 0.1) 0%, transparent 70%);
     animation: pulse 4s ease-in-out infinite;
 }
 
@@ -311,9 +307,11 @@ nav ul {
 }
 
 .roel-title {
+    position: relative;
+    z-index: 2;
     font-size: 2.5rem;
     font-weight: 800;
-    background: linear-gradient(45deg, #ff6b35, #ff8c42);
+    background: linear-gradient(45deg, #ff3535, #ff4242);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -324,8 +322,10 @@ nav ul {
 }
 
 .roel-meaning {
+    position: relative;
+    z-index: 2;
     font-size: 1.3rem;
-    color: #ffa726;
+    color: #ff2643;
     text-align: center;
     font-weight: 600;
     margin-bottom: 25px;
@@ -334,6 +334,8 @@ nav ul {
 }
 
 .roel-explanation {
+    position: relative;
+    z-index: 2;
     color: #e0e0e0;
     font-size: 1.05rem;
     line-height: 1.8;
@@ -343,6 +345,8 @@ nav ul {
 }
 
 .quote-section {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -353,8 +357,10 @@ nav ul {
 }
 
 .quote-box {
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.15), rgba(255, 140, 66, 0.1));
-    border-left: 4px solid #ff6b35;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, rgba(255, 53, 53, 0.15), rgba(255, 66, 66, 0.1));
+    border-left: 4px solid #ff3535;
     border-radius: 10px;
     padding: 25px;
     font-style: italic;
@@ -368,7 +374,7 @@ nav ul {
 .quote-box::before {
     content: '"';
     font-size: 4rem;
-    color: #ff6b35;
+    color: #ff3543;
     position: absolute;
     top: -10px;
     left: 15px;
@@ -376,28 +382,34 @@ nav ul {
 }
 
 .quote-author {
+    position: relative;
+    z-index: 2;
     text-align: right;
     margin-top: 15px;
-    color: #ffa726;
+    color: #ff2626;
     font-weight: 600;
 }
 
 .quote-image {
+    position: relative;
+    z-index: 2;
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid rgba(255, 107, 53, 0.6);
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+    border: 3px solid rgba(255, 53, 53, 0.6);
+    box-shadow: 0 10px 30px rgba(255, 53, 73, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .quote-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+    box-shadow: 0 15px 40px rgba(255, 53, 70, 0.6);
 }
 
 .closing-statement {
+    position: relative;
+    z-index: 2;
     margin-top: 40px;
     font-size: 1.1rem;
     color: #e0e0e0;
@@ -460,6 +472,8 @@ nav ul {
 .avatar {
   flex: 1 1 350px;
   max-width: 500px;
+  position: relative;
+  z-index: 2;
 }
 
 .avatar img {
@@ -483,12 +497,16 @@ nav ul {
 }
 
 .hello-text {
+  position: relative;
+  z-index: 2;
   font-size: 32px;
   margin: 0;
   color: #fff !important;
 }
 
 .name-text {
+  position: relative;
+  z-index: 2;
   font-size: 48px;
   font-weight: bold;
   margin: 10px 0;
@@ -502,11 +520,15 @@ nav ul {
 }
 
 .typing-header {
+  position: relative;
+  z-index: 2;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 .typing-text {
+  position: relative;
+  z-index: 2;
   color: #ff8d8d;
   font-weight: bold;
   background: linear-gradient(45deg, #ff3535, #ff4255, #ff262d);
@@ -522,22 +544,6 @@ nav ul {
   line-height: 1.6;
   color: #ddd;
   text-align: justify;
-}
-
-.read-more-btn {
-  background-color: #8DD8FF;
-  color: #001c34;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  margin-top: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.read-more-btn:hover {
-  background-color: #6fc8eb;
 }
 
 /* === RESPONSIVE === */
@@ -567,6 +573,8 @@ nav ul {
 
 /* === RESUME === */
 .resume-button {
+  position: relative;
+  z-index: 2;
   display: inline-block;
   background-color: #ff5252;
   color: #001c34;
@@ -702,6 +710,7 @@ nav ul {
 }
 
 .achievement-description {
+  text-align: justify;
   color: #ccc;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -760,7 +769,7 @@ nav ul {
 
 .achievement-image img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   display: block;
 }
@@ -845,7 +854,19 @@ nav ul {
   }
 }
 
-/* === Leadership & Activities === */
+/* Leadership & Activities Styles */
+.leadership-act{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  background: linear-gradient(45deg, #8DD8FF, #6fc8eb, #8DD8FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(141, 216, 255, 0.3);
+}
+
 .leadership-intro {
   text-align: center;
   margin-bottom: 3rem;
@@ -960,7 +981,7 @@ nav ul {
 }
 
 .role-badge.founder {
-  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  background: linear-gradient(45deg, #6bffe6, #52ccee);
   color: white;
 }
 
@@ -1055,77 +1076,32 @@ nav ul {
   background: linear-gradient(135deg, rgba(141, 216, 255, 0.1), rgba(111, 200, 235, 0.1));
   border: 2px dashed rgba(141, 216, 255, 0.3);
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  overflow: hidden;
+  position: relative;
+  cursor: zoom-in;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
-.photo-slot:hover {
-  background: linear-gradient(135deg, rgba(141, 216, 255, 0.2), rgba(111, 200, 235, 0.2));
-  border-color: rgba(141, 216, 255, 0.5);
+.photo-slot img.zoomable-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-slot:hover img.zoomable-image {
   transform: scale(1.05);
 }
 
-.photo-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.zoomable-image:not(.photo-slot .zoomable-image) {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  display: block;
 }
 
-.photo-slot p {
-  font-size: 0.8rem;
-  color: #8DD8FF;
-  margin: 0;
-  font-weight: 500;
-}
-
-.impact-summary {
-  margin-top: 4rem;
-  text-align: center;
-}
-
-.impact-summary h3 {
-  color: #8DD8FF;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-}
-
-.impact-card {
-  background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  border: 1px solid rgba(141, 216, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.impact-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(141, 216, 255, 0.3);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.impact-number {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #8DD8FF;
-  margin-bottom: 0.5rem;
-}
-
-.impact-label {
-  color: #ccc;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.zoomable-image:not(.photo-slot .zoomable-image):hover {
+  transform: scale(1.02);
 }
 
 @keyframes fadeInUp {
@@ -1176,6 +1152,11 @@ nav ul {
 }
 
 /* Zoom modal */
+.zoomable-image {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
 .image-modal {
   display: flex;
   align-items: center;
@@ -1210,4 +1191,20 @@ nav ul {
   font-weight: bold;
   cursor: pointer;
   z-index: 10000;
+}
+
+.read-more-btn {
+  background-color: #8DD8FF;
+  color: #001c34;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #6fc8eb;
 }
