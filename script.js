@@ -20,7 +20,7 @@ function typeLoop() {
   const currentText = roles[index];
   const isComplete = charIndex === currentText.length;
 
-  // Hiển thị văn bản + dấu gạch |
+  // Hiển thị văn bản
   typingEl.innerHTML = currentText.substring(0, charIndex) + '<span class="cursor">|</span>';
 
   if (!isDeleting) {
@@ -78,7 +78,7 @@ function showSection(id, el) {
     section.classList.remove('visible');
     setTimeout(() => {
       section.classList.add('hidden');
-    }, 500); // thời gian trùng với transition 0.5s
+    }, 500); 
   });
 
   // Xóa class active khỏi tất cả nav links
@@ -95,53 +95,63 @@ function showSection(id, el) {
     setTimeout(() => {
       target.classList.remove('hidden');
       target.classList.add('visible');
-    }, 500); // delay hiển thị sau khi fade out xong
+    }, 500); 
   }
 }
 
-    // Intersection Observer for animation trigger
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+  // Intersection Observer for animation trigger
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}ms`;
-          entry.target.style.animationPlayState = 'running';
-        }
-      });
-    }, observerOptions);
-
-    // Observe achievement items
-    document.addEventListener('DOMContentLoaded', () => {
-      const achievementItems = document.querySelectorAll('.achievement-item');
-      achievementItems.forEach((item, index) => {
-        item.dataset.delay = index * 200;
-        item.style.animationPlayState = 'paused';
-        observer.observe(item);
-      });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}ms`;
+        entry.target.style.animationPlayState = 'running';
+      }
     });
+  }, observerOptions);
 
-  // Bắt sự kiện click vào ảnh
-  document.querySelectorAll('.zoomable-image').forEach(img => {
-    img.addEventListener('click', () => {
-      const modal = document.getElementById('image-modal');
-      const modalImg = document.getElementById('modal-img');
-      modalImg.src = img.src;
-      modal.classList.remove('hidden');
+  // Observe achievement items
+  document.addEventListener('DOMContentLoaded', () => {
+    const achievementItems = document.querySelectorAll('.achievement-item');
+    achievementItems.forEach((item, index) => {
+      item.dataset.delay = index * 200;
+      item.style.animationPlayState = 'paused';
+      observer.observe(item);
     });
   });
 
-  // Đóng khi click nút X
-  document.querySelector('.close-button').addEventListener('click', () => {
-    document.getElementById('image-modal').classList.add('hidden');
+// Xử lý zoom cho tất cả ảnh có class zoomable-image
+document.querySelectorAll('.zoomable-image').forEach(img => {
+  img.addEventListener('click', function() {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    
+    modalImg.src = this.src;
+    modalImg.alt = this.alt || 'Ảnh phóng to';
+    modal.classList.remove('hidden');
+    
+    // Thêm hiệu ứng fade in
+    setTimeout(() => {
+      modalImg.style.opacity = '1';
+    }, 10);
   });
+});
 
-  // Đóng khi click ngoài ảnh
-  document.getElementById('image-modal').addEventListener('click', (e) => {
-    if (e.target.id === 'image-modal') {
-      document.getElementById('image-modal').classList.add('hidden');
-    }
-  });
+// Đóng modal
+document.querySelector('.close-button')?.addEventListener('click', () => {
+  const modal = document.getElementById('image-modal');
+  modal.querySelector('#modal-img').style.opacity = '0';
+  modal.classList.add('hidden');
+});
+
+// Đóng khi click bên ngoài ảnh
+document.getElementById('image-modal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.querySelector('#modal-img').style.opacity = '0';
+    this.classList.add('hidden');
+  }
+});
