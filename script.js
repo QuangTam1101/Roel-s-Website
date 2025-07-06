@@ -20,7 +20,6 @@ function typeLoop() {
   const currentText = roles[index];
   const isComplete = charIndex === currentText.length;
 
-  // Hiển thị văn bản
   typingEl.innerHTML = currentText.substring(0, charIndex) + '<span class="cursor">|</span>';
 
   if (!isDeleting) {
@@ -46,8 +45,6 @@ function typeLoop() {
 }
 
 document.addEventListener("DOMContentLoaded", typeLoop);
-
-
 
 // Read more
 function toggleReadMore() {
@@ -99,32 +96,30 @@ function showSection(id, el) {
   }
 }
 
-  // Intersection Observer for animation trigger
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}ms`;
-        entry.target.style.animationPlayState = 'running';
-      }
-    });
-  }, observerOptions);
-
-  // Observe achievement items
-  document.addEventListener('DOMContentLoaded', () => {
-    const achievementItems = document.querySelectorAll('.achievement-item');
-    achievementItems.forEach((item, index) => {
-      item.dataset.delay = index * 200;
-      item.style.animationPlayState = 'paused';
-      observer.observe(item);
-    });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}ms`;
+      entry.target.style.animationPlayState = 'running';
+    }
   });
+}, observerOptions);
 
-// Xử lý zoom cho tất cả ảnh có class zoomable-image
+document.addEventListener('DOMContentLoaded', () => {
+  const achievementItems = document.querySelectorAll('.achievement-item');
+  achievementItems.forEach((item, index) => {
+    item.dataset.delay = index * 200;
+    item.style.animationPlayState = 'paused';
+    observer.observe(item);
+  });
+});
+
+// Xử lý zoom ảnh
 document.querySelectorAll('.zoomable-image').forEach(img => {
   img.addEventListener('click', function() {
     const modal = document.getElementById('image-modal');
@@ -134,7 +129,6 @@ document.querySelectorAll('.zoomable-image').forEach(img => {
     modalImg.alt = this.alt || 'Ảnh phóng to';
     modal.classList.remove('hidden');
     
-    // Thêm hiệu ứng fade in
     setTimeout(() => {
       modalImg.style.opacity = '1';
     }, 10);
@@ -155,3 +149,21 @@ document.getElementById('image-modal')?.addEventListener('click', function(e) {
     this.classList.add('hidden');
   }
 });
+
+// little corner
+let currentIndex = 0;
+const track = document.getElementById('book-track');
+
+function scrollBooks(direction) {
+  const books = track.querySelectorAll('.book');
+  const total = books.length;
+
+  books[currentIndex].classList.remove('book-center');
+
+  currentIndex = (currentIndex + direction + total) % total;
+
+  books[currentIndex].classList.add('book-center');
+
+  const offset = -160 * currentIndex + (track.offsetWidth / 2 - 160);
+  track.style.transform = `translateX(${offset}px)`;
+}
