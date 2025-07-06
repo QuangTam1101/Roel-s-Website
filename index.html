@@ -6,6 +6,10 @@
   <title>Roel's Website</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="star.css">
+  <link rel="stylesheet" href="achievement.css">
+  <link rel="stylesheet" href="corner.css">
+  <link rel="stylesheet" href="leadership.css">
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
   <header>
@@ -227,8 +231,71 @@
 
     <!-- Mục projects -->
     <section id="projects" class="section hidden">
-      <h2>My Projects</h2>
-      <p>Dự án...</p>
+      <h2 class="my-project">My Projects</h2>
+      <div class="project-card">
+          <div class="project-header">
+              <div class="project-icon">
+                  🧠
+              </div>
+              <div>
+                  <h3 class="project-title">Calm Space</h3>
+                  <a href="https://quangtam1101.github.io/Here4U/" class="project-link" target="_blank">
+                      Visit Website →
+                  </a>
+              </div>
+          </div>
+          
+          <div class="project-role">Founder, Developer</div>
+          
+          <p class="project-description">
+              A mental health chatbot providing accessible emotional support through AI-powered conversations and evidence-based therapeutic techniques.
+          </p>
+          
+          <div class="project-mission">
+              <h4>🎯 Mission</h4>
+              <p>Promote mental well-being by providing free, accessible support and fostering emotional resilience among youth and adults.</p>
+          </div>
+          
+          <div class="stats-container">
+              <div class="stat-item">
+                  <span class="stat-number-project">100+</span>
+                  <span class="stat-label">Users</span>
+              </div>
+              <div class="stat-item">
+                  <span class="stat-number-project">24/7</span>
+                  <span class="stat-label">Available Support</span>
+              </div>
+              <div class="stat-item">
+                  <span class="stat-number-project">100%</span>
+                  <span class="stat-label">Free Access</span>
+              </div>
+          </div>
+          
+          <div class="features-grid">
+              <div class="feature-card">
+                  <div class="feature-icon">💬</div>
+                  <h4 class="feature-title">Conversational AI</h4>
+                  <p class="feature-description">Guided conversational flows based on psychological first aid principles for immediate emotional support.</p>
+              </div>
+              
+              <div class="feature-card">
+                  <div class="feature-icon">☺️</div>
+                  <h4 class="feature-title">Intuitive & Friendly interface</h4>
+                  <p class="feature-description">A soothing design with easy navigation, empathetic interactions, and visual cues to make mental health support accessible to everyone.</p>
+              </div>
+              
+          </div>
+          
+          <div class="demo-section">
+              <h3 class="demo-title">🖥️ Interface & Code</h3>
+              <div class="demo-images">
+                  <img src="Ảnh\chat-interface.jpg" alt="Chat Interface" class="demo-image zoomable-image">
+                  <img src="Ảnh\chat 2.jpg" alt="Resource Library" class="demo-image zoomable-image">
+                  <img src="Ảnh\github chat.jpg" alt="Progress Tracking" class="demo-image zoomable-image">
+              </div>
+          </div>
+          
+      </div>
     </section>
 
     <!-- Mục leadership -->
@@ -339,6 +406,7 @@
             <div class="leadership-header">
               <div class="role-badge head-academic">Head of Academic</div>
               <div class="leadership-title">Tram Chuyen Cap 25:28</div>
+              <div class="leadership-subtitle">Math Department</div>
               <div class="leadership-period">August 2024 – Present</div>
             </div>
             
@@ -395,7 +463,7 @@
               <div class="achievements-list">
                 <div class="achievement-point">
                   <span class="achievement-icon">🔬</span>
-                  <span>Curated workshop series on natural elements (Fire, Water, Earth, Light) for 100+ participants</span>
+                  <span>Curated workshop series on natural elements (Fire, Water, Earth, Light) for 60+ participants</span>
                 </div>
                 <div class="achievement-point">
                   <span class="achievement-icon">🤖</span>
@@ -479,11 +547,119 @@
       </div>
     </section>
 
-    <!-- Mục my little -->
+    <!-- My Little Corner Section -->
     <section id="corner" class="section hidden">
-      <h2>My Little Corner</h2>
-      <p>My hobbies :>...</p>
+
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="corner-hero">
+          <h1 class="corner-title">
+            <span class="small-text">MY LITTLE</span>
+            <span class="large-text">CORNER</span>
+          </h1>
+          <div class="reading-image">
+            <img src="Ảnh/playing football.png" alt="Reading photo" class="reading-photo"
+              onerror="this.style.display='none'; document.querySelector('.reading-placeholder').style.display='flex';">
+            <div class="reading-placeholder" style="display: none;">⚽</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <!-- Intro Text -->
+        <div class="description">
+          <p>People often think coders are dry, rigid, and glued to a dark room, avoiding the world. That’s not quite me. Sure, I spend a lot of time indoors working on projects, but I also love stepping out to play sports, wander through bookstores, and explore the world in my own way. This little corner is where I share those passions-coding, yes, but also the other pieces that make me who I am.</p>
+        </div>
+
+        <!-- About Reading -->
+<div class="reading-section section-container scroll-reveal">
+  <div class="section-header">
+    <div class="section-icon">📚</div>
+    <div>
+      <h2 class="section-title">About Reading</h2>
+      <p class="section-subtitle">Opening new worlds through books</p>
+    </div>
+  </div>
+  
+  <div class="section-content">
+    <p class="section-description">
+      Reading opens new worlds to me. I enjoy diving into stories, ideas, and experiences written by others. Each book is a journey that expands my perspective and enriches my understanding of life. From Japanese literature to science fiction, every genre offers something unique and valuable.
+    </p>
+
+    <p class="have-read"> SOME BOOKS THAT I'VE READ</p>
+    
+    <!-- Book Carousel -->
+    <div class="book-carousel">
+        <button class="book-nav left" onclick="scrollBooks(-1)">❮</button>
+            <div class="book-track" id="book-track">
+              <!-- Each book -->
+              <div class="book">
+                <img src="Ảnh\Book 2.png" alt="Book 1">
+                <p class="book-title">Kafka on the Shore</p>
+              </div>
+              <div class="book">
+                <img src="Ảnh\Book 1.png" alt="Book 2">
+                <p class="book-title">Norwegian Wood</p>
+              </div>
+              <div class="book">
+                <img src="Ảnh\Book 3.png" alt="Book 3">
+                <p class="book-title">Angels & Demons</p>
+              </div>
+              <div class="book">
+                <img src="Ảnh\Book 4.png" alt="Book 4">
+                <p class="book-title">Hảo nữ Trung Hoa</p>
+              </div>
+              <div class="book">
+                <img src="Ảnh\Book 5.png" alt="Book 5">
+                <p class="book-title">The song of Acchiles</p>
+              </div>  
+              <div class="book">
+                <img src="Ảnh\Book 6.png" alt="Book 6">
+                <p class="book-title">Người máy có mơ về cừu điện không?</p>
+              </div>
+              <div class="book">
+                <img src="Ảnh\Book 7.png" alt="Book 7">
+                <p class="book-title">Căn phòng của Giovanni</p>
+              </div>
+            </div>
+            <button class="book-nav right" onclick="scrollBooks(1)">❯</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Sport -->
+      <div class="sport-section section-container scroll-reveal">
+        <div class="section-header">
+          <div class="section-icon">⚽</div>
+          <div>
+            <h2 class="section-title">About Sport</h2>
+            <p class="section-subtitle">Staying active and balanced</p>
+          </div>
+        </div>
+        
+        <div class="section-content">
+          <div class="sport-images-row">
+            <div class="sport-image-container">
+              <img src="Ảnh/football 1.jpg" alt="Playing football 1" class="sport-photo zoomable-image" onerror="this.style.display='none'">
+            </div>
+            <div class="sport-image-container">
+              <img src="Ảnh/football 2.jpg" alt="Playing football 2" class="sport-photo zoomable-image" onerror="this.style.display='none'">
+            </div>
+          </div>
+          
+          <div class="sport-text-container">
+            <p class="section-description">
+              Sport keeps me grounded. Whether I'm out on the football field or just going for a run, it's my way of staying connected to the real world and keeping my mind clear. It's not just about staying active - it's about finding balance and enjoying the small moments that come with every game or quiet jog.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
     </section>
+
+    
   </main>
 
   <div id="image-modal" class="image-modal hidden">
