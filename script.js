@@ -119,37 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Xử lý zoom ảnh
-document.querySelectorAll('.zoomable-image').forEach(img => {
-  img.addEventListener('click', function() {
-    const modal = document.getElementById('image-modal');
-    const modalImg = document.getElementById('modal-img');
-    
-    modalImg.src = this.src;
-    modalImg.alt = this.alt || 'Ảnh phóng to';
-    modal.classList.remove('hidden');
-    
-    setTimeout(() => {
-      modalImg.style.opacity = '1';
-    }, 10);
-  });
-});
-
-// Đóng modal
-document.querySelector('.close-button')?.addEventListener('click', () => {
-  const modal = document.getElementById('image-modal');
-  modal.querySelector('#modal-img').style.opacity = '0';
-  modal.classList.add('hidden');
-});
-
-// Đóng khi click bên ngoài ảnh
-document.getElementById('image-modal')?.addEventListener('click', function(e) {
-  if (e.target === this) {
-    this.querySelector('#modal-img').style.opacity = '0';
-    this.classList.add('hidden');
-  }
-});
-
 // little corner
 let currentIndex = 0;
 const track = document.getElementById('book-track');
@@ -167,3 +136,143 @@ function scrollBooks(direction) {
   const offset = -160 * currentIndex + (track.offsetWidth / 2 - 160);
   track.style.transform = `translateX(${offset}px)`;
 }
+
+// === XỬ LÝ ZOOM ẢNH ĐƯỢC CẢI THIỆN ===
+function initImageZoom() {
+  // Xóa event listeners cũ
+  document.querySelectorAll('.zoomable-image').forEach(img => {
+    img.replaceWith(img.cloneNode(true));
+  });
+  
+  // Thêm event listeners mới
+  document.querySelectorAll('.zoomable-image').forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation(); // Ngăn event bubble up
+      
+      const modal = document.getElementById('image-modal');
+      const modalImg = document.getElementById('modal-img');
+      
+      if (modal && modalImg) {
+        modalImg.src = this.src;
+        modalImg.alt = this.alt || 'Ảnh phóng to';
+        modal.classList.remove('hidden');
+        
+        // Đảm bảo ảnh giữ tỉ lệ gốc
+        modalImg.style.maxWidth = '90%';
+        modalImg.style.maxHeight = '90vh';
+        modalImg.style.width = 'auto';
+        modalImg.style.height = 'auto';
+        modalImg.style.objectFit = 'contain';
+        
+        setTimeout(() => {
+          modalImg.style.opacity = '1';
+        }, 10);
+      }
+    });
+  });
+}
+
+// Gọi hàm khi DOM loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initImageZoom();
+  
+  // Re-init khi chuyển section
+  const originalShowSection = window.showSection;
+  window.showSection = function(id, el) {
+    originalShowSection(id, el);
+    setTimeout(() => {
+      initImageZoom();
+    }, 600);
+  };
+});
+
+// Đóng modal zoom ảnh
+document.querySelector('.close-button')?.addEventListener('click', () => {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-img');
+  if (modal && modalImg) {
+    modalImg.style.opacity = '0';
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 300);
+  }
+});
+
+// Đóng khi click bên ngoài ảnh
+document.getElementById('image-modal')?.addEventListener('click', function(e) {
+  if (e.target === this || e.target.classList.contains('modal-content')) {
+    const modalImg = document.getElementById('modal-img');
+    modalImg.style.opacity = '0';
+    setTimeout(() => {
+      this.classList.add('hidden');
+    }, 200);
+  }
+});
+
+// Đóng modal zoom với ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const imageModal = document.getElementById('image-modal');
+    if (imageModal && !imageModal.classList.contains('hidden')) {
+      const modalImg = document.getElementById('modal-img');
+      modalImg.style.opacity = '0';
+      setTimeout(() => {
+        imageModal.classList.add('hidden');
+      }, 300);
+    }
+  }
+});
+
+// === ACHIEVEMENT MODAL FUNCTIONS ===
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Re-init zoom cho ảnh trong modal
+    setTimeout(() => {
+      initImageZoom();
+    }, 100);
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Close achievement modal when clicking outside
+document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('click', function(e) {
+    // Chỉ đóng nếu click vào background, không phải content
+    if (e.target === this) {
+      this.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+});
+
+// Update ESC key handler cho cả 2 loại modal
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    // Đóng achievement modals
+    document.querySelectorAll('.modal.active').forEach(modal => {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+    
+    // Đóng image zoom modal
+    const imageModal = document.getElementById('image-modal');
+    if (imageModal && !imageModal.classList.contains('hidden')) {
+      const modalImg = document.getElementById('modal-img');
+      modalImg.style.opacity = '0';
+      setTimeout(() => {
+        imageModal.classList.add('hidden');
+      }, 300);
+    }
+  }
+});
