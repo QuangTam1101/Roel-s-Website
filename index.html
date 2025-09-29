@@ -39,11 +39,6 @@
           <p class="bio">
             I am someone who finds joy in coding and building things with logic, but that does not mean I am rigid. I enjoy exploring the worlds that books open for me, seeing life through the lens of different writers. I love playing football and basketball, feeling alive with every game and every run. I am curious about the world and I want to experience as many things as I can, growing with every challenge and adventure I take on.
           </p>
-          <a href="https://drive.google.com/file/d/1mRbvH-9CTPXiqhRGuhpE5QMlTeiLBuvq/view?usp=drive_link"
-          target="_blank"
-          class="resume-button">
-            View my resume
-          </a>
         </div>
       </div>
 
@@ -91,134 +86,122 @@
     <section id="achievements" class="section hidden">
       <h2 class="Achievements">Achievements</h2>
       
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">3</div>
-          <div class="stat-label">Medals</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Prizes</div>
-        </div>
-      </div>
-
-      <div class="achievements-timeline">
-
-        <div class="achievement-item">
-          <div class="achievement-content">
-            <div class="achievement-category">AI & Medical Diagnostics</div>
-            <h3 class="achievement-title">BME INNOVATION COMPETITION 2025</h3>
-            <p class="achievement-description">
-              I collaborated with a research team to develop an innovative project<strong>"AI-Based Diagnosis of Respiratory Diseases via Lung Sound Analysis"</strong>, developing a machine learning model that extracts abnormal acoustic features for early disease detection. Our solution demonstrated superior accuracy compared to traditional diagnostic methods, earning the competition's <strong>highest honor</strong>.
-            </p>
-            <div class="achievement-awards">
-              <div class="award-badge">
-                <span class="award-icon">🏆</span>
-                <span class="award-text">Special Prize (Best Overall, highest award)</span>
-              </div>
-              <div class="award-badge">
-                <span class="award-icon">🤖</span>
-                <span class="award-text">AI Model Development</span>
-              </div>
-            </div>
-            <div class="achievement-images">
-              <div class="achievement-image">
-                <img src="Ảnh\bmei.jpg" alt="BME Innovation Competition 2025 - Grand Prize Winner" class="zoomable-image">
-              </div>
-            </div>
+      <div class="achievements-grid">
+        <!-- Achievement Card 1 -->
+        <div class="achievement-card">
+          <div class="certificate-container">
+            <img src="image.jpg" alt="AIJAM US 2025" class="certificate-image zoomable-image">
+            <!-- Nếu chưa có ảnh, hiển thị placeholder -->
+            <!-- <div class="certificate-placeholder">🏆</div> -->
+          </div>
+          <div class="achievement-info">
+            <h3 class="achievement-title">2025 AIJAM-US competition</h3>
+            <p class="achievement-date">Golden Prize</p>
+            <button class="more-info-btn" onclick="openModal('aijam-us-modal')">More Info</button>
           </div>
         </div>
 
-        <div class="achievement-item">
-          <div class="achievement-content">
-            <div class="achievement-category">AI & Competitive Programming</div>
-            <h3 class="achievement-title">2025 Central Highlands Informatics Olympiad - AI ​​Challenge category</h3>
-            <p class="achievement-description">
-              Competed in this prestigious AI competition involving three key domains: <strong>Machine Learning, Computer Vision, and NLP</strong>. 
-        Designed and optimized AI models based on given problem statements, advancing through rigorous elimination rounds.
-            </p>
-            <div class="achievement-awards">
-              <div class="award-badge">
-                <span class="award-icon">🎖️</span>
-                <span class="award-text">Honorable Mention</span>
-              </div>
-              <div class="award-badge">
-                <span class="award-icon">⚡</span>
-                <span class="award-text"><strong>Top 3</strong> in Qualifying Round</span>
-              </div>
-            </div>
-            <div class="achievement-images">
-              <div class="achievement-image">
-                <img src="Ảnh\MTTN.jpg" alt="Olympic Tin Hoc Certificate" class="zoomable-image">
-              </div>
-            </div>
+        <!-- Achievement Card 2 -->
+        <div class="achievement-card">
+          <div class="certificate-container">
+            <img src="Ảnh\bmei_certi.jpg" alt="BME Innovation Competition Certificate" class="certificate-image zoomable-image">
+            <!-- Nếu chưa có ảnh, hiển thị placeholder -->
+            <!-- <div class="certificate-placeholder">🏆</div> -->
+          </div>
+          <div class="achievement-info">
+            <h3 class="achievement-title">BME Innovation Competition 2024</h3>
+            <p class="achievement-date">Special Prize (Highest)</p>
+            <button class="more-info-btn" onclick="openModal('bme-modal')">More Info</button>
           </div>
         </div>
 
-        <div class="achievement-item">
-          <div class="achievement-content">
-            <div class="achievement-category">Mathematics & Science</div>
-            <h3 class="achievement-title">Philippines International Math and Science Olympics</h3>
-            <p class="achievement-description">
-              Earned a gold medal in this prestigious mathematics competition, demonstrating strong problem-solving skills in advanced mathematical concepts.
-            </p>
-            <div class="achievement-awards">
-              <div class="award-badge">
-                <span class="award-icon">🥇</span>
-                <span class="award-text">Gold Medal</span>
-              </div>
-            </div>
-            <div class="achievement-images">
-              <div class="achievement-image">
-                <img src="Ảnh\PIMSO_GOLD.jpg" alt="Philippines Olympiad" class="zoomable-image">
-              </div>
-            </div>
+        <!-- Achievement Card 3 -->
+        <div class="achievement-card">
+          <div class="certificate-container">
+            <img src="Ảnh\MTTN.jpg" alt="Informatics Olympiad Certificate" class="certificate-image zoomable-image">
+          </div>
+          <div class="achievement-info">
+            <h3 class="achievement-title">Central Highlands Informatics Olympiad</h3>
+            <p class="achievement-date">Honorable Mention</p>
+            <button class="more-info-btn" onclick="openModal('olympiad-modal')">More Info</button>
           </div>
         </div>
 
-        <div class="achievement-item">
-          <div class="achievement-content">
-            <div class="achievement-category">Mathematics & Science</div>
+        <!-- Achievement Card 4 -->
+        <div class="achievement-card">
+          <div class="certificate-container">
+            <img src="Ảnh\PIMSO_GOLD.jpg" alt="PIMSO Certificate" class="certificate-image zoomable-image">
+          </div>
+          <div class="achievement-info">
+            <h3 class="achievement-title">Philippines International Math Olympics</h3>
+            <p class="achievement-date">Gold Medal</p>
+            <button class="more-info-btn" onclick="openModal('pimso-modal')">More Info</button>
+          </div>
+        </div>
+
+        <!-- Achievement Card 5 -->
+        <div class="achievement-card">
+          <div class="certificate-container">
+            <img src="Ảnh\BISO.jpg" alt="BISO Certificate" class="certificate-image zoomable-image">
+          </div>
+          <div class="achievement-info">
             <h3 class="achievement-title">Brilliance Intelligence Students Olympiad</h3>
-            <p class="achievement-description">
-              Awarded bronze medals for mathematical problem-solving in this national competition, demonstrating strong analytical abilities against top student competitors.
-            </p>
-            <div class="achievement-awards">
-              <div class="award-badge">
-                <span class="award-icon">🥉</span>
-                <span class="award-text">Bronze Medal</span>
-              </div>
-            </div>
-            <div class="achievement-images">
-              <div class="achievement-image">
-                <img src="Ảnh\BISO.jpg" alt="ASMOPSS Award" class="zoomable-image">
-              </div>
-            </div>
+            <p class="achievement-date">Bronze Medal</p>
+            <button class="more-info-btn" onclick="openModal('biso-modal')">More Info</button>
           </div>
         </div>
 
-        <div class="achievement-item">
-          <div class="achievement-content">
-            <div class="achievement-category">Mathematics & Science</div>
+        <!-- Achievement Card 6 -->
+        <div class="achievement-card">
+          <div class="certificate-container">
+            <img src="Ảnh\ASMO.jpg" alt="ASMO Certificate" class="certificate-image zoomable-image">
+          </div>
+          <div class="achievement-info">
             <h3 class="achievement-title">Asian Science and Mathematics Olympiad</h3>
-            <p class="achievement-description">
-              Received bronze medals in Asian science and Mathematics Olympiad, showcasing consistent high-level performance in Mathematics.
-            </p>
-            <div class="achievement-awards">
-              <div class="award-badge">
-                <span class="award-icon">🥉</span>
-                <span class="award-text">Bronze Medal</span>
-              </div>
-            </div>
-            <div class="achievement-images">
-              <div class="achievement-image">
-                <img src="Ảnh\ASMO.jpg" alt="ASMOPSS Award" class="zoomable-image">
-              </div>
-            </div>
+            <p class="achievement-date">Bronze Medal</p>
+            <button class="more-info-btn" onclick="openModal('asmo-modal')">More Info</button>
           </div>
         </div>
 
+        <!-- Thêm các achievement khác nếu cần -->
       </div>
+
+      <!-- Modals -->
+      <!-- BME Modal -->
+      <div id="bme-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">BME Innovation Competition 2025</h2>
+            <button class="modal-close" onclick="closeModal('bme-modal')">×</button>
+          </div>
+          <div class="modal-body">
+            <div class="achievement-gallery">
+              <div class="gallery-item">
+                <img src="Ảnh\bmei_nhan_prize.jpg" alt="Award Ceremony" class="gallery-image zoomable-image">
+                <div class="image-caption">Receiving the Special Prize at the award ceremony</div>
+              </div>
+              <div class="gallery-item">
+                <img src="Ảnh\bmei_present.jpg" alt="Team Presentation" class="gallery-image zoomable-image">
+                <div class="image-caption">Presenting our AI-based lung sound analysis project</div>
+              </div>
+              <div class="gallery-item">
+                <img src="path-to-image3.jpg" alt="Working on Project" class="gallery-image zoomable-image">
+                <div class="image-caption">Developing the machine learning model with my team</div>
+              </div>
+            </div>
+            
+            <div class="achievement-description">
+              <h3 class="description-title">About the Achievement</h3>
+              <p class="description-text">
+                Our team developed an innovative AI-Based Diagnosis system for Respiratory Diseases via Lung Sound Analysis. 
+                This project demonstrated superior accuracy compared to traditional diagnostic methods and earned the competition's highest honor - the Special Prize.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Các modal khác tương tự... -->
     </section>
 
 
@@ -661,4 +644,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
