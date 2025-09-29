@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="corner.css">
   <link rel="stylesheet" href="leadership.css">
   <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="research.css">
 </head>
 <body>
   <header>
@@ -18,6 +19,7 @@
       <ul>
         <li class="nav-link about" onclick="showSection('about', this)">About Me</li>
         <li class="nav-link achievements" onclick="showSection('achievements', this)">Achievements</li>
+        <li class="nav-link research" onclick="showSection('research', this)">Research & Internship</li>
         <li class="nav-link projects" onclick="showSection('projects', this)">My Projects</li>
         <li class="nav-link leadership" onclick="showSection('leadership', this)">Leadership & Activities</li>
         <li class="nav-link corner" onclick="showSection('corner', this)">My Little Corner</li>
@@ -252,6 +254,196 @@
       <!-- Các modal khác tương tự... -->
     </section>
 
+    <!-- Research & Internship Section -->
+    <section id="research" class="section hidden">
+      <h2 class="research-internship-title">Research & Internship</h2>
+      
+      <div class="research-internship-container">
+        
+        <!-- RESEARCH SECTION -->
+        <div class="section-divider">
+          <h3 class="section-divider-title">Research</h3>
+        </div>
+        
+        <div class="research-section">
+          <div class="research-grid">
+            
+            <!-- BME Research Paper -->
+            <div class="research-item">
+              <div class="paper-thumbnail">
+                <img src="Ảnh\Lung Rizzler_B-AI-01-Lung rizzler.docx_page-0002.jpg" alt="Paper 1 Thumbnail" class="zoomable-image">
+              </div>
+              <div class="paper-content">
+                <h3 class="paper-title">Application of Artificial Intelligence Models in Diagnosing Respiratory Diseases Through Abnormal Feature Extraction from Lung Sounds</h3>
+                <p class="paper-authors">Quang Tam Thieu, Co-authors</p>
+                <p class="paper-journal">BME INNOVATION COMPETITION 2025</p>
+                <p class="paper-abstract">
+                  This research presents an innovative approach to respiratory disease diagnosis using machine learning algorithms to analyze lung sounds. Our model achieved superior accuracy in detecting abnormal acoustic patterns, providing a non-invasive diagnostic tool for early disease detection.
+                </p>
+                <div class="paper-keywords">
+                  <span class="paper-keywords-label">Keywords:</span>
+                  <span class="keyword-tag">Machine Learning</span>
+                  <span class="keyword-tag">Healthcare</span>
+                  <span class="keyword-tag">Audio Processing</span>
+                </div>
+                <a href="https://drive.google.com/file/d/1vfdEQ5ktiz76VC84lciLrKxFDEmjJP5P/view?usp=sharing" target="_blank" class="view-paper-btn">View Full Paper</a>
+              </div>
+            </div>
+            
+            <!-- AIJAM Research Paper -->
+            <div class="research-item">
+              <div class="paper-thumbnail">
+                <img src="Ảnh\AI-JAM 2025 Research Paper_pages-to-jpg-0001.jpg" alt="Paper 2 Thumbnail" class="zoomable-image">
+              </div>
+              <div class="paper-content">
+                <h3 class="paper-title">AI-powered Mobile Application for Plant Disease Detection</h3>
+                <p class="paper-authors">Quang Tam Thieu, Co-authors</p>
+                <p class="paper-journal">AIJAM-US 2025</p>
+                <p class="paper-abstract">
+                  An exploration of convolutional neural networks for automated diagnosis in medical imaging. Our research demonstrates the potential of deep learning models in identifying pathological patterns with high precision, reducing diagnostic time and improving patient outcomes.
+                </p>
+                <div class="paper-keywords">
+                  <span class="paper-keywords-label">Keywords:</span>
+                  <span class="keyword-tag">Deep Learning</span>
+                  <span class="keyword-tag">Computer Vision</span>
+                  <span class="keyword-tag">Application AI</span>
+                </div>
+                <a href="https://drive.google.com/file/d/1QQ8-JxWNaAhgY64q0Eh81tb1vaXv0PC-/view?usp=sharing" target="_blank" class="view-paper-btn">View Full Paper</a>
+              </div>
+            </div>
+            
+            <!-- Research Paper 3 -->
+            <div class="research-item">
+              <div class="paper-thumbnail">
+                <img src="path-to-paper3-thumbnail.jpg" alt="Paper 3 Thumbnail" class="zoomable-image">
+              </div>
+              <div class="paper-content">
+                <h3 class="paper-title">xxxxx</h3>
+                <p class="paper-authors">Quang Tam Thieu, Research Team</p>
+                <p class="paper-journal">xxx</p>
+                <p class="paper-abstract">
+                  Development of an NLP-based chatbot system for providing mental health support. The research focuses on sentiment analysis and empathetic response generation to create more human-like interactions in digital mental health interventions.
+                </p>
+                <div class="paper-keywords">
+                  <span class="paper-keywords-label">Keywords:</span>
+                  <span class="keyword-tag">NLP</span>
+                  <span class="keyword-tag">Mental Health</span>
+                  <span class="keyword-tag">Chatbot</span>
+                </div>
+                <a href="path-to-pdf3.pdf" target="_blank" class="view-paper-btn">View Full Paper</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- INTERNSHIP SECTION -->
+        <div class="section-divider">
+          <h3 class="section-divider-title">Internship</h3>
+        </div>
+        
+        <div class="internship-section">
+          <div class="internship-grid">
+            
+            <!-- Internship 1 -->
+            <div class="internship-card">
+              <div class="internship-image-carousel">
+                <div class="carousel-container">
+                  <div class="carousel-track" id="aiot-carousel">
+                    <div class="carousel-slide active">
+                      <img src="Ảnh\eeg.jpg" alt="AIoT Lab 1" class="zoomable-image">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="Ảnh\aiot_lab.jpg" alt="AIoT Lab 2" class="zoomable-image">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="Ảnh\eeg internship.jpg" alt="AIoT Lab 3" class="zoomable-image">
+                    </div>
+                  </div>
+                  
+                  <!-- Navigation buttons -->
+                  <button class="carousel-btn prev" onclick="changeSlide('aiot-carousel', -1)">‹</button>
+                  <button class="carousel-btn next" onclick="changeSlide('aiot-carousel', 1)">›</button>
+                  
+                  <!-- Dots indicator -->
+                  <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide('aiot-carousel', 1)"></span>
+                    <span class="dot" onclick="currentSlide('aiot-carousel', 2)"></span>
+                    <span class="dot" onclick="currentSlide('aiot-carousel', 3)"></span>
+                  </div>
+                  
+                  <div class="internship-overlay">
+                    <h3 class="internship-company">AIoT Lab</h3>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="internship-details">
+                <span class="internship-period">June 2024 - August 2024</span>
+                <h4 class="internship-role">AI Research Intern</h4>
+                <p class="internship-description">
+                  Worked on developing machine learning models for predictive analytics. Collaborated with senior researchers on data preprocessing, model training, and evaluation. Implemented various deep learning architectures and contributed to improving model accuracy by 15%.
+                </p>
+                <div class="internship-skills">
+                  <span class="skill-badge">Python</span>
+                  <span class="skill-badge">TensorFlow</span>
+                  <span class="skill-badge">Data Analysis</span>
+                  <span class="skill-badge">Machine Learning</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Internship 2 -->
+            <div class="internship-card">
+              <div class="internship-image">
+                <img src="path-to-company2.jpg" alt="Company 2" class="zoomable-image">
+                <div class="internship-overlay">
+                  <h3 class="internship-company">Devus Technology Company Limited</h3>
+                </div>
+              </div>
+              <div class="internship-details">
+                <span class="internship-period">January 2024 - March 2024</span>
+                <h4 class="internship-role">Medical AI Developer</h4>
+                <p class="internship-description">
+                  Developed AI solutions for medical diagnosis assistance. Created data pipelines for processing medical imaging data and implemented computer vision models for anomaly detection. Participated in clinical validation studies with medical professionals.
+                </p>
+                <div class="internship-skills">
+                  <span class="skill-badge">Computer Vision</span>
+                  <span class="skill-badge">PyTorch</span>
+                  <span class="skill-badge">Medical Imaging</span>
+                  <span class="skill-badge">Research</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Internship 3 -->
+            <div class="internship-card">
+              <div class="internship-image">
+                <img src="path-to-company3.jpg" alt="Company 3" class="zoomable-image">
+                <div class="internship-overlay">
+                  <h3 class="internship-company">HCMUT EE Machine Learning & IoT Lab - HCMUT</h3>
+                </div>
+              </div>
+              <div class="internship-details">
+                <span class="internship-period">September 2023 - December 2023</span>
+                <h4 class="internship-role">Data Science Intern</h4>
+                <p class="internship-description">
+                  Analyzed large datasets to extract meaningful insights for business intelligence. Built predictive models and created interactive dashboards for data visualization. Worked on natural language processing projects for customer sentiment analysis.
+                </p>
+                <div class="internship-skills">
+                  <span class="skill-badge">Data Science</span>
+                  <span class="skill-badge">SQL</span>
+                  <span class="skill-badge">Visualization</span>
+                  <span class="skill-badge">Statistics</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </section>
 
     <!-- Mục projects -->
     <section id="projects" class="section hidden">
