@@ -11,7 +11,7 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 50px;
-  background: linear-gradient(45deg, #fff98d, #ebe96f, #fff28d);
+  background: linear-gradient(45deg, #ffaa3b 0%, #fba22d 50%, #ff9d3b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -47,7 +47,7 @@
 .achievement-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 50px rgba(255, 249, 141, 0.3);
-  border-color: #fff98d;
+  border-color: #ffc08d;
 }
 
 /* Certificate Image Container - Bigger */
@@ -76,7 +76,7 @@
 /* Certificate Placeholder */
 .certificate-placeholder {
   font-size: 5rem;
-  color: #fff98d;
+  color: #ffc48d;
   opacity: 0.3;
 }
 
@@ -109,7 +109,7 @@
 
 /* More Info Button - Bigger */
 .more-info-btn {
-  background: linear-gradient(45deg, #fff98d, #ebe96f);
+  background: linear-gradient(45deg, #ffd18d, #ebab6f);
   color: #1a1a1a;
   border: none;
   padding: 14px 35px;
@@ -125,7 +125,7 @@
 }
 
 .more-info-btn:hover {
-  background: linear-gradient(45deg, #ebe96f, #fff28d);
+  background: linear-gradient(45deg, #ebbe6f, #ffd18d);
   transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(255, 249, 141, 0.4);
 }
@@ -157,7 +157,7 @@
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  border: 3px solid #fff98d;
+  border: 3px solid #ffc88d;
   animation: slideUp 0.3s ease;
 }
 
@@ -184,7 +184,7 @@
   right: 25px;
   top: 25px;
   font-size: 2.5rem;
-  color: #fff98d;
+  color: #ffc48d;
   cursor: pointer;
   transition: transform 0.3s ease;
   background: rgba(0, 0, 0, 0.5);
@@ -255,7 +255,7 @@
 }
 
 .description-title {
-  color: #fff98d;
+  color: #ffc28d;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 15px;
@@ -379,12 +379,12 @@
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #fff98d, #ebe96f);
+  background: linear-gradient(180deg, #ffca8d, #ebb96f);
   border-radius: 10px;
 }
 
 .modal-content::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ebe96f, #fff28d);
+  background: linear-gradient(180deg, #ebc26f, #ffd58d);
 }
 
 /* Animation cho cards khi load */
@@ -411,19 +411,19 @@
 }
 
 /* Hiệu ứng glow cho cards */
-.achievement-card::before {
+/* .achievement-card::before {
   content: '';
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #fff98d, #ebe96f, #fff28d, #ebe96f);
+  background: linear-gradient(45deg, #ffc68d, #ebb16f, #ffca8d, #ebb96f);
   border-radius: 20px;
   opacity: 0;
   z-index: -1;
   transition: opacity 0.3s ease;
-}
+} */
 
 .achievement-card:hover::before {
   opacity: 0.6;
