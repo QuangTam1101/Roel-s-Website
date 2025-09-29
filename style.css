@@ -151,13 +151,29 @@ nav ul {
 }
 
 .nav-link.achievements:hover {
-  background: linear-gradient(135deg, #ffeb3b 0%, #fbc02d 50%, #ffeb3b 100%);
+  background: linear-gradient(135deg, #ffaa3b 0%, #fba22d 50%, #ff9d3b 100%);
   background-size: 200% 200%;
   animation: gradientShift 2s ease infinite;
   color: #333;
 }
 
 .nav-link.achievements::before {
+  background: linear-gradient(45deg, #ffaa3b 0%, #fba22d 50%, #ff9d3b 100%);
+  background-size: 300% 300%;
+}
+
+.nav-link.research {
+  background: linear-gradient(135deg, #222 0%, #2a2a1a 100%);
+}
+
+.nav-link.research:hover {
+  background: linear-gradient(135deg, #ffeb3b 0%, #fbc02d 50%, #ffeb3b 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 2s ease infinite;
+  color: #333;
+}
+
+.nav-link.research::before {
   background: linear-gradient(45deg, #ffeb3b, #fbc02d, #ffff57, #ffeb3b);
   background-size: 300% 300%;
 }
