@@ -276,3 +276,70 @@ document.addEventListener('keydown', function(e) {
     }
   }
 });
+
+// === INTERNSHIP CAROUSEL FUNCTIONS ===
+let slideIndexes = {};
+
+function changeSlide(carouselId, direction) {
+  const carousel = document.getElementById(carouselId);
+  if (!carousel) return;
+  
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const dots = carousel.closest('.internship-card').querySelectorAll('.dot');
+  
+  // Initialize slide index if not exists
+  if (!slideIndexes[carouselId]) {
+    slideIndexes[carouselId] = 1;
+  }
+  
+  // Hide current slide
+  slides[slideIndexes[carouselId] - 1].classList.remove('active');
+  dots[slideIndexes[carouselId] - 1].classList.remove('active');
+  
+  // Calculate new index
+  slideIndexes[carouselId] += direction;
+  
+  // Wrap around if necessary
+  if (slideIndexes[carouselId] > slides.length) {
+    slideIndexes[carouselId] = 1;
+  }
+  if (slideIndexes[carouselId] < 1) {
+    slideIndexes[carouselId] = slides.length;
+  }
+  
+  // Show new slide
+  slides[slideIndexes[carouselId] - 1].classList.add('active');
+  dots[slideIndexes[carouselId] - 1].classList.add('active');
+}
+
+function currentSlide(carouselId, slideNumber) {
+  const carousel = document.getElementById(carouselId);
+  if (!carousel) return;
+  
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const dots = carousel.closest('.internship-card').querySelectorAll('.dot');
+  
+  // Hide all slides
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  
+  // Show selected slide
+  slides[slideNumber - 1].classList.add('active');
+  dots[slideNumber - 1].classList.add('active');
+  
+  // Update slide index
+  slideIndexes[carouselId] = slideNumber;
+}
+
+// Auto-play carousel (optional)
+function autoPlayCarousel(carouselId, interval = 5000) {
+  setInterval(() => {
+    changeSlide(carouselId, 1);
+  }, interval);
+}
+
+// Initialize auto-play for all carousels (optional)
+document.addEventListener('DOMContentLoaded', function() {
+  // Uncomment if you want auto-play
+  // autoPlayCarousel('aiot-carousel', 5000);
+});
