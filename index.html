@@ -18,7 +18,7 @@
     <nav>
       <ul>
         <li class="nav-link about" onclick="showSection('about', this)">About Me</li>
-        <li class="nav-link achievements" onclick="showSection('achievements', this)">Achievements</li>
+        <li class="nav-link achievements" onclick="showSection('achievements', this)">Honors & Achievements</li>
         <li class="nav-link research" onclick="showSection('research', this)">Research & Internship</li>
         <li class="nav-link projects" onclick="showSection('projects', this)">My Projects</li>
         <li class="nav-link leadership" onclick="showSection('leadership', this)">Leadership & Activities</li>
@@ -86,13 +86,13 @@
 
     <!-- Mục achievements -->
     <section id="achievements" class="section hidden">
-      <h2 class="Achievements">Achievements</h2>
+      <h2 class="Achievements">Honors & Achievements</h2>
       
       <div class="achievements-grid">
         <!-- Achievement Card 1 -->
         <div class="achievement-card">
           <div class="certificate-container">
-            <img src="aijam_certi.jpg" alt="AIJAM US 2025" class="certificate-image zoomable-image">
+            <img src="Ảnh\aijam_certi.jpg" alt="AIJAM US 2025" class="certificate-image zoomable-image">
             <!-- Nếu chưa có ảnh, hiển thị placeholder -->
             <!-- <div class="certificate-placeholder">🏆</div> -->
           </div>
@@ -457,74 +457,296 @@
       </div>
     </section>
 
-    <!-- Mục projects -->
-    <section id="projects" class="section hidden">
-      <h2 class="my-project">My Projects</h2>
-      <div class="project-card">
-          <div class="project-header">
-              <div class="project-icon">
-                  🧠
-              </div>
-              <div>
-                  <h3 class="project-title">Calm Space</h3>
-                  <a href="https://here4u-render.onrender.com/" class="project-link" target="_blank">
-                      Visit Website →
-                  </a>
-              </div>
-          </div>
-          
-          <div class="project-role">Founder, Developer</div>
-          
-          <p class="project-description">
-              A mental health chatbot providing accessible emotional support through AI-powered conversations and evidence-based therapeutic techniques.
-          </p>
-          
-          <div class="project-mission">
-              <h4>🎯 Mission</h4>
-              <p>Promote mental well-being by providing free, accessible support and fostering emotional resilience among youth and adults.</p>
-          </div>
-          
-          <div class="stats-container">
-              <div class="stat-item">
-                  <span class="stat-number-project">100+</span>
-                  <span class="stat-label">Users</span>
-              </div>
-              <div class="stat-item">
-                  <span class="stat-number-project">24/7</span>
-                  <span class="stat-label">Available Support</span>
-              </div>
-              <div class="stat-item">
-                  <span class="stat-number-project">100%</span>
-                  <span class="stat-label">Free Access</span>
-              </div>
-          </div>
-          
-          <div class="features-grid">
-              <div class="feature-card">
-                  <div class="feature-icon">💬</div>
-                  <h4 class="feature-title">Conversational AI</h4>
-                  <p class="feature-description">Guided conversational flows based on psychological first aid principles for immediate emotional support.</p>
-              </div>
-              
-              <div class="feature-card">
-                  <div class="feature-icon">☺️</div>
-                  <h4 class="feature-title">Intuitive & Friendly interface</h4>
-                  <p class="feature-description">A soothing design with easy navigation, empathetic interactions, and visual cues to make mental health support accessible to everyone.</p>
-              </div>
-              
-          </div>
-          
-          <div class="demo-section">
-              <h3 class="demo-title">🖥️ Interface & Code</h3>
-              <div class="demo-images">
-                  <img src="Ảnh\chat-interface.jpg" alt="Chat Interface" class="demo-image zoomable-image">
-                  <img src="Ảnh\chat 2.jpg" alt="Resource Library" class="demo-image zoomable-image">
-                  <img src="Ảnh\github chat.jpg" alt="Progress Tracking" class="demo-image zoomable-image">
-              </div>
-          </div>
-          
-      </div>
-    </section>
+<!-- My Projects Section - PROFESSIONAL VERSION -->
+<section id="projects" class="section hidden">
+    <div class="projects-wrapper">
+        <!-- Background Effects -->
+        <div class="bg-gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+        </div>
+        
+        <!-- Main Header -->
+        <header class="projects-header">
+            <h2 class="projects-title-glow">
+                <span class="title-text">My Projects</span>
+                <span class="title-blur">My Projects</span>
+            </h2>
+            <p class="projects-subtitle">Innovation through technology and empathy</p>
+        </header>
+
+        <!-- Projects Container -->
+        <div class="projects-showcase">
+            
+            <!-- PROJECT 1: CALM SPACE -->
+            <article class="project-container" id="project-calm-space">
+                <div class="project-number">01</div>
+                <div class="project-content-wrapper">
+                    <!-- Project Header -->
+                    <div class="project-header">
+                        <h3 class="project-title">Calm Space</h3>
+                        <div class="project-meta">
+                            <span class="status-badge active">Active</span>
+                            <span class="project-type">Web Application</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Overview -->
+                    <div class="project-overview">
+                        <p class="overview-text">
+                            A comprehensive mental health support platform designed for the younger generation facing psychological challenges. 
+                            Calm Space provides a safe digital environment where users can track their emotional journey, receive AI-powered support, 
+                            and connect with a supportive community.
+                        </p>
+                    </div>
+                    
+                    <!-- Core Features -->
+                    <div class="features-section">
+                        <h4 class="section-label">Core Features</h4>
+                        <div class="features-grid">
+                            <!-- Feature 1: Mood Diary -->
+                            <div class="feature-card" data-feature="mood-diary">
+                                <div class="feature-header">
+                                    <h5 class="feature-name">Mood Diary</h5>
+                                    <button class="view-more-btn" onclick="openFeatureModal('mood-diary')">
+                                        View Details
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 18l6-6-6-6"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="feature-brief">Track and analyze your daily emotional patterns</p>
+                            </div>
+                            
+                            <!-- Feature 2: Calmi AI -->
+                            <div class="feature-card" data-feature="calmi-ai">
+                                <div class="feature-header">
+                                    <h5 class="feature-name">Calmi AI</h5>
+                                    <button class="view-more-btn" onclick="openFeatureModal('calmi-ai')">
+                                        View Details
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 18l6-6-6-6"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="feature-brief">24/7 AI companion for emotional support</p>
+                            </div>
+                            
+                            <!-- Feature 3: Community Forum -->
+                            <div class="feature-card" data-feature="community-forum">
+                                <div class="feature-header">
+                                    <h5 class="feature-name">Community Forum</h5>
+                                    <button class="view-more-btn" onclick="openFeatureModal('community-forum')">
+                                        View Details
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 18l6-6-6-6"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p class="feature-brief">Share experiences and healing methods</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technology Stack -->
+                    <div class="tech-section">
+                        <h4 class="section-label">Technology Stack</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">Express.js</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Links -->
+                    <div class="project-actions">
+                        <a href="https://here4u-render.onrender.com/" target="_blank" class="action-btn primary">
+                            Visit Website
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </a>
+                        <button class="action-btn secondary">
+                            View Source Code
+                        </button>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- PROJECT 2: SMARTGLASSES -->
+            <article class="project-container" id="project-smartglasses">
+                <div class="project-number">02</div>
+                <div class="project-content-wrapper">
+                    <!-- Project Header -->
+                    <div class="project-header">
+                        <h3 class="project-title">SmartGlasses</h3>
+                        <div class="project-meta">
+                            <span class="status-badge development">In Development</span>
+                            <span class="project-type">Hardware + AI</span>
+                        </div>
+                    </div>
+                    
+                    <!-- The Story Section -->
+                    <div class="story-section">
+                        <div class="story-content">
+                            <h4 class="section-label">The Inspiration</h4>
+                            <div class="story-layout">
+                                <div class="story-text">
+                                    <p class="story-quote">"I wish I could read this book myself"</p>
+                                    <p class="story-description">
+                                        During a visit to a shelter, I met a visually impaired child who loved stories. 
+                                        As I read to them, they expressed a deep desire to read independently. 
+                                        That moment sparked the creation of SmartGlasses - a device that transforms 
+                                        written text into audio, giving the gift of independent reading to those 
+                                        who cannot see the words on a page.
+                                    </p>
+                                </div>
+                                <div class="story-image">
+                                    <img src="Ảnh/shelter-visit.jpg" alt="At the shelter" class="story-photo zoomable-image">
+                                    <p class="image-caption">Teaching at the shelter where the idea was born</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Showcase -->
+                    <div class="product-section">
+                        <h4 class="section-label">Product Demo</h4>
+                        <div class="product-showcase">
+                            <!-- Video Demo -->
+                            <div class="demo-video">
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                        title="SmartGlasses Demo" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Images -->
+                            <div class="product-gallery">
+                                <div class="gallery-main">
+                                    <img src="https://via.placeholder.com/600x400/1a1a1a/00FF88?text=SmartGlasses+Device" alt="SmartGlasses Device" class="main-product-img zoomable-image">
+                                </div>
+                                <div class="gallery-thumbs">
+                                    <img src="https://via.placeholder.com/150x100/1a1a1a/00FF88?text=View+1" alt="View 1" class="thumb-img zoomable-image">
+                                    <img src="https://via.placeholder.com/150x100/1a1a1a/00FF88?text=View+2" alt="View 2" class="thumb-img zoomable-image">
+                                    <img src="https://via.placeholder.com/150x100/1a1a1a/00FF88?text=View+3" alt="View 3" class="thumb-img zoomable-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical Details -->
+                    <div class="technical-section">
+                        <h4 class="section-label">Technical Implementation</h4>
+                        
+                        <!-- Hardware Components -->
+                        <div class="hardware-specs">
+                            <h5 class="subsection-title">Hardware Components</h5>
+                            <div class="specs-grid">
+                                <div class="spec-item">
+                                    <span class="spec-label">Processor</span>
+                                    <span class="spec-value">Raspberry Pi 4B</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Camera</span>
+                                    <span class="spec-value">8MP HD Camera Module</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Display</span>
+                                    <span class="spec-value">OLED 1.3" Display</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Audio</span>
+                                    <span class="spec-value">Bone Conduction Speaker</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Battery</span>
+                                    <span class="spec-value">3000mAh Li-Po</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Connectivity</span>
+                                    <span class="spec-value">WiFi + Bluetooth 5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- How It Works -->
+                        <div class="process-steps">
+                            <h5 class="subsection-title">How It Works</h5>
+                            <div class="steps-timeline">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h6>Image Capture</h6>
+                                        <p>User positions the device over text and captures an image using the built-in camera</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h6>Text Recognition</h6>
+                                        <p>OCR technology processes the image and extracts text with 98% accuracy</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h6>Audio Synthesis</h6>
+                                        <p>Advanced TTS engine converts text to natural-sounding speech in multiple languages</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h6>Audio Delivery</h6>
+                                        <p>Clear audio output through bone conduction speakers or standard headphones</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Links -->
+                    <div class="project-actions">
+                        <button class="action-btn primary">
+                            Watch Full Demo
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                        <button class="action-btn secondary">
+                            Technical Documentation
+                        </button>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+    </div>
+    
+    <!-- Feature Modal -->
+    <div id="feature-modal" class="feature-modal">
+        <div class="modal-overlay" onclick="closeFeatureModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeFeatureModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-content" id="modal-content">
+                <!-- Content will be injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Mục leadership -->
     <section id="leadership" class="section hidden">
@@ -896,5 +1118,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
