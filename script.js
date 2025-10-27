@@ -343,3 +343,141 @@ document.addEventListener('DOMContentLoaded', function() {
   // Uncomment if you want auto-play
   // autoPlayCarousel('aiot-carousel', 5000);
 });
+
+// === PROJECT FEATURE MODAL DATA ===
+const projectFeatureData = {
+    'mood-diary': {
+        title: 'Mood Diary',
+        description: 'Track your emotional journey with our intuitive mood tracking system. Record daily feelings, identify patterns, and gain insights into your mental health.',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your actual video
+        features: [
+            'Daily mood tracking with emoji selection',
+            'Emotional pattern analysis',
+            'Monthly mood reports',
+            'Personalized insights and recommendations'
+        ]
+    },
+    'calmi-ai': {
+        title: 'Calmi AI Assistant',
+        description: 'Your 24/7 AI companion powered by advanced language models. Get instant emotional support, coping strategies, and personalized mental health guidance.',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your actual video
+        features: [
+            'Real-time emotional support',
+            'Personalized coping strategies',
+            'Crisis intervention guidance',
+            'Multilingual support'
+        ]
+    },
+    'community-forum': {
+        title: 'Community Forum',
+        description: 'Connect with others on similar journeys. Share experiences, find support, and build meaningful connections in a safe, moderated environment.',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your actual video
+        features: [
+            'Anonymous sharing options',
+            'Moderated discussions',
+            'Support groups by topic',
+            'Professional moderator oversight'
+        ]
+    }
+};
+
+// === PROJECT FEATURE MODAL FUNCTIONS ===
+function openProjectFeature(featureId) {
+    const modal = document.getElementById('project-feature-modal');
+    const modalContent = document.getElementById('project-modal-content');
+    const data = projectFeatureData[featureId];
+    
+    if (!data) return;
+    
+    // Save current scroll position
+    const scrollY = window.scrollY;
+    document.body.setAttribute('data-scroll-position', scrollY);
+    
+    // Build modal content with video
+    modalContent.innerHTML = `
+        <h3 class="project-modal-title">${data.title}</h3>
+        <p class="project-modal-description">${data.description}</p>
+        
+        <div class="project-video-container">
+            <div class="project-video-wrapper">
+                <iframe 
+                    src="${data.videoUrl}?autoplay=1" 
+                    title="${data.title} Demo" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        
+        <h4 style="color: rgba(255, 255, 255, 0.9); margin: 20px 0 15px;">Key Features:</h4>
+        <ul class="project-feature-list">
+            ${data.features.map(feature => `<li>${feature}</li>`).join('')}
+        </ul>
+    `;
+    
+    // Add modal-open class to body to prevent background scrolling
+    document.body.classList.add('modal-open');
+    modal.classList.add('active');
+    
+    // Scroll modal content to top
+    modalContent.scrollTop = 0;
+}
+
+function closeProjectFeature() {
+    const modal = document.getElementById('project-feature-modal');
+    const modalContent = document.getElementById('project-modal-content');
+    
+    // Remove modal-open class from body
+    document.body.classList.remove('modal-open');
+    
+    // Restore scroll position
+    const scrollY = document.body.getAttribute('data-scroll-position');
+    if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY));
+        document.body.removeAttribute('data-scroll-position');
+    }
+    
+    modal.classList.remove('active');
+    
+    // Stop video playback
+    setTimeout(() => {
+        modalContent.innerHTML = '';
+    }, 300);
+}
+
+// Initialize modal event listeners when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Close modal when clicking overlay
+    const projectOverlay = document.querySelector('.project-modal-overlay');
+    if (projectOverlay) {
+        projectOverlay.addEventListener('click', closeProjectFeature);
+    }
+    
+    // Prevent scroll propagation from modal content
+    const projectModalContent = document.getElementById('project-modal-content');
+    if (projectModalContent) {
+        projectModalContent.addEventListener('wheel', function(e) {
+            const deltaY = e.deltaY;
+            const contentHeight = this.scrollHeight;
+            const visibleHeight = this.offsetHeight;
+            const scrollTop = this.scrollTop;
+            
+            if ((deltaY < 0 && scrollTop === 0) || 
+                (deltaY > 0 && scrollTop + visibleHeight >= contentHeight)) {
+                e.preventDefault();
+            }
+            e.stopPropagation();
+        });
+    }
+});
+
+// ESC key handler for project modal
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const projectModal = document.getElementById('project-feature-modal');
+        if (projectModal && projectModal.classList.contains('active')) {
+            closeProjectFeature();
+        }
+    }
+});
