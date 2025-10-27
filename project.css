@@ -681,3 +681,272 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* === PROJECT FEATURE MODAL (FIXED SCROLLING) === */
+.project-feature-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: none;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+.project-feature-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.project-modal-container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh; /* Limit height to viewport */
+    background: linear-gradient(135deg, #1a1a1a, #111111);
+    border-radius: 20px;
+    border: 2px solid rgba(0, 255, 136, 0.3);
+    display: flex;
+    flex-direction: column;
+    animation: projectModalSlideIn 0.3s ease;
+    z-index: 2;
+    overflow: hidden; /* Hide overflow on container */
+}
+
+@keyframes projectModalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.project-modal-close:hover {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: rgba(255, 0, 0, 0.5);
+    transform: rotate(90deg);
+}
+
+/* Scrollable content area */
+.project-modal-content {
+    padding: 40px;
+    overflow-y: auto; /* Enable scrolling for content */
+    overflow-x: hidden;
+    max-height: 100%;
+    flex: 1;
+}
+
+/* Custom scrollbar for modal content */
+.project-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.project-modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.project-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 136, 0.5);
+    border-radius: 10px;
+}
+
+.project-modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 136, 0.7);
+}
+
+.project-modal-title {
+    color: #00FF88;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    padding-right: 50px; /* Space for close button */
+}
+
+.project-modal-description {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.project-video-container {
+    width: 100%;
+    margin: 25px 0;
+}
+
+.project-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 255, 136, 0.2);
+    background: #000;
+}
+
+.project-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-feature-list li {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-feature-list li:last-child {
+    border-bottom: none;
+}
+
+.project-feature-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00FF88;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-modal-container {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .project-modal-content {
+        padding: 30px 20px;
+    }
+    
+    .project-modal-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* === FEATURE CARD WITH IMAGE === */
+.feature-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    background: rgba(0, 255, 136, 0.05);
+    border-color: rgba(0, 255, 136, 0.2);
+    transform: translateY(-3px);
+}
+
+.feature-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #111;
+}
+
+.feature-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-img {
+    transform: scale(1.05);
+}
+
+.feature-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover .feature-overlay {
+    opacity: 1;
+}
+
+.play-demo-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(0, 255, 136, 0.9);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.play-demo-btn:hover {
+    background: #00FF88;
+    transform: scale(1.1);
+}
+
+.feature-info {
+    padding: 25px;
+}
