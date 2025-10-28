@@ -13,12 +13,38 @@ body {
 /* === HEADER === */
 header {
   display: flex;
-  position: relative;
-  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background-color: #1d1d1d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  box-sizing: border-box; 
+}
+
+/* Điều chỉnh padding cho nội dung chính */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #383838;
+  color: #fff;
+  margin: 0;
+  padding-top: 80px; 
+}
+
+/* Responsive cho header fixed */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  body {
+    padding-top: 70px; 
+  }
 }
 
 .logo {
