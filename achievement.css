@@ -245,7 +245,8 @@
   border-top: 1px solid rgba(255, 249, 141, 0.2);
 }
 
-/* Achievement Description - Bigger Text */
+/* Achievement Description */
+
 .achievement-description {
   background: rgba(255, 249, 141, 0.05);
   padding: 25px;
@@ -254,11 +255,26 @@
   border: 1px solid rgba(255, 249, 141, 0.1);
 }
 
-.description-title {
-  color: #ffc28d;
+.modal-body .description-title,
+.achievement-description .description-title {
+  color: #ff9d3b !important; /* Màu cam rõ ràng hơn với !important */
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 15px;
+  background: linear-gradient(45deg, #ffaa3b 0%, #fba22d 50%, #ff9d3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Đảm bảo không bị override bởi CSS khác */
+#bme-modal .description-title,
+.modal .description-title {
+  color: #ff9d3b !important;
+  background: linear-gradient(45deg, #ffaa3b 0%, #fba22d 50%, #ff9d3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .description-text {
