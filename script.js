@@ -349,7 +349,7 @@ const projectFeatureData = {
     'mood-diary': {
         title: 'Mood Diary',
         description: 'Track your emotional journey with our intuitive mood tracking system. Record daily feelings, identify patterns, and gain insights into your mental health.',
-        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your actual video
+        videoUrl: 'https://www.youtube.com/embed/w2ltpWCmu0E', // Replace with your actual video
         features: [
             'Daily mood tracking with emoji selection',
             'Emotional pattern analysis',
@@ -360,7 +360,7 @@ const projectFeatureData = {
     'calmi-ai': {
         title: 'Calmi AI Assistant',
         description: 'Your 24/7 AI companion powered by advanced language models. Get instant emotional support, coping strategies, and personalized mental health guidance.',
-        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with your actual video
+        videoUrl: 'https://www.youtube.com/embed/JbBSaQSR_Bo', // Replace with your actual video
         features: [
             'Real-time emotional support',
             'Personalized coping strategies',
