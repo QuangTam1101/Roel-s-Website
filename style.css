@@ -682,3 +682,19 @@ nav ul {
 .read-more-btn:hover {
   background-color: #6fc8eb;
 }
+
+/* === KHOẢNG CÁCH CHUNG CHO TẤT CẢ TIÊU ĐỀ SECTIONS === */
+.Achievements,
+.research-internship-title,
+.leadership-act,
+.corner-title {
+  margin-top: 90px !important; /* Khoảng cách đồng nhất */
+  margin-bottom: 50px;
+}
+
+/* Hoặc tạo một class chung */
+.section-main-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
