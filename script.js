@@ -481,3 +481,42 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  const body = document.body;
+  
+  // Tạo overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'menu-overlay';
+  document.body.appendChild(overlay);
+  
+  // Toggle menu
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    body.classList.toggle('menu-open');
+  });
+  
+  // Close menu when clicking overlay
+  overlay.addEventListener('click', function() {
+    closeMenu();
+  });
+  
+  // Close menu when clicking nav links (đã thêm trong HTML)
+  window.closeMenu = function() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    body.classList.remove('menu-open');
+  }
+  
+  // Close menu on window resize if needed
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 1024) {
+      closeMenu();
+    }
+  });
+});
