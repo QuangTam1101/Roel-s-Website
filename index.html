@@ -15,14 +15,21 @@
 <body>
   <header>
     <div class="logo"><span class="highlight">Roel's</span> Website</div>
-    <nav>
+
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="nav-menu">
       <ul>
-        <li class="nav-link about" onclick="showSection('about', this)">About Me</li>
-        <li class="nav-link achievements" onclick="showSection('achievements', this)">Honors & Achievements</li>
-        <li class="nav-link research" onclick="showSection('research', this)">Research & Internship</li>
-        <li class="nav-link projects" onclick="showSection('projects', this)">My Projects</li>
-        <li class="nav-link leadership" onclick="showSection('leadership', this)">Leadership & Activities</li>
-        <li class="nav-link corner" onclick="showSection('corner', this)">My Little Corner</li>
+        <li class="nav-link about" onclick="showSection('about', this); closeMenu()">About Me</li>
+        <li class="nav-link achievements" onclick="showSection('achievements', this); closeMenu()">Honors & Achievements</li>
+        <li class="nav-link research" onclick="showSection('research', this); closeMenu()">Research & Internship</li>
+        <li class="nav-link projects" onclick="showSection('projects', this); closeMenu()">My Projects</li>
+        <li class="nav-link leadership" onclick="showSection('leadership', this); closeMenu()">Leadership & Activities</li>
+        <li class="nav-link corner" onclick="showSection('corner', this); closeMenu()">My Little Corner</li>
       </ul>
     </nav>
   </header>
