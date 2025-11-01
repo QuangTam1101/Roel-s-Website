@@ -100,13 +100,11 @@
         <div class="achievement-card">
           <div class="certificate-container">
             <img src="Ảnh\aijam_certi.jpg" alt="AIJAM US 2025" class="certificate-image zoomable-image">
-            <!-- Nếu chưa có ảnh, hiển thị placeholder -->
-            <!-- <div class="certificate-placeholder">🏆</div> -->
           </div>
           <div class="achievement-info">
-            <h3 class="achievement-title">2025 AIJAM-US competition</h3>
+            <h3 class="achievement-title">AIJAM-US competition</h3>
             <p class="achievement-date">Golden Prize</p>
-            <button class="more-info-btn" onclick="openModal('aijam-us-modal')">More Info</button>
+            <button class="more-info-btn" onclick="openModal('aijam-modal')">More Info</button>
           </div>
         </div>
 
@@ -114,11 +112,9 @@
         <div class="achievement-card">
           <div class="certificate-container">
             <img src="Ảnh\bmei_certi.jpg" alt="BME Innovation Competition Certificate" class="certificate-image zoomable-image">
-            <!-- Nếu chưa có ảnh, hiển thị placeholder -->
-            <!-- <div class="certificate-placeholder">🏆</div> -->
           </div>
           <div class="achievement-info">
-            <h3 class="achievement-title">BME Innovation Competition 2024</h3>
+            <h3 class="achievement-title">BME Innovation Competition</h3>
             <p class="achievement-date">Special Prize (Highest)</p>
             <button class="more-info-btn" onclick="openModal('bme-modal')">More Info</button>
           </div>
@@ -132,7 +128,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Central Highlands Informatics Olympiad</h3>
             <p class="achievement-date">Honorable Mention</p>
-            <button class="more-info-btn" onclick="openModal('olympiad-modal')">More Info</button>
           </div>
         </div>
 
@@ -144,7 +139,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Philippines International Math Olympics</h3>
             <p class="achievement-date">Gold Medal</p>
-            <button class="more-info-btn" onclick="openModal('pimso-modal')">More Info</button>
           </div>
         </div>
 
@@ -156,7 +150,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Certificate of Completion</h3>
             <p class="achievement-date">Excellent</p>
-            <button class="more-info-btn" onclick="openModal('hsg9-modal')">More Info</button>
           </div>
         </div>
 
@@ -168,7 +161,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Math Olympiad and AI Training Program</h3>
             <p class="achievement-date">Certificate</p>
-            <button class="more-info-btn" onclick="openModal('olympiad-modal')">More Info</button>
           </div>
         </div>
 
@@ -180,7 +172,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Asian Science and Mathematics Olympiad</h3>
             <p class="achievement-date">Bronze Medal</p>
-            <button class="more-info-btn" onclick="openModal('asmo-modal')">More Info</button>
           </div>
         </div>
 
@@ -192,7 +183,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Excellent Student - 9th Grade </h3>
             <p class="achievement-date">Excellent</p>
-            <button class="more-info-btn" onclick="openModal('hsg9-modal')">More Info</button>
           </div>
         </div>        
 
@@ -204,7 +194,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Excellent Student - 10th Grade</h3>
             <p class="achievement-date">Excellent</p>
-            <button class="more-info-btn" onclick="openModal('hsg10-modal')">More Info</button>
           </div>
         </div>  
 
@@ -216,7 +205,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Excellent Student - 11th Grade</h3>
             <p class="achievement-date">Excellent</p>
-            <button class="more-info-btn" onclick="openModal('hsg11-modal')">More Info</button>
           </div>
         </div>
 
@@ -228,7 +216,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">Brilliance Intelligence Students Olympiad</h3>
             <p class="achievement-date">Bronze Medal</p>
-            <button class="more-info-btn" onclick="openModal('biso-modal')">More Info</button>
           </div>
         </div>
 
@@ -240,7 +227,6 @@
           <div class="achievement-info">
             <h3 class="achievement-title">International Computer Science Competition</h3>
             <p class="achievement-date">Exceptional Submission</p>
-            <button class="more-info-btn" onclick="openModal('asmo-modal')">More Info</button>
           </div>
         </div>
 
@@ -252,7 +238,7 @@
       <div id="bme-modal" class="modal">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title">BME Innovation Competition 2025</h2>
+            <h2 class="modal-title">BME Innovation Competition</h2>
             <button class="modal-close" onclick="closeModal('bme-modal')">×</button>
           </div>
           <div class="modal-body">
@@ -266,7 +252,7 @@
                 <div class="image-caption">Presenting our AI-based lung sound analysis project</div>
               </div>
               <div class="gallery-item">
-                <img src="path-to-image3.jpg" alt="Working on Project" class="gallery-image zoomable-image">
+                <img src="Ảnh\bme 3.png" alt="Working on Project" class="gallery-image zoomable-image">
                 <div class="image-caption">Developing the machine learning model with my team</div>
               </div>
             </div>
@@ -282,7 +268,38 @@
         </div>
       </div>
 
-      <!-- Các modal khác tương tự... -->
+      <!-- AIJAM Modal -->
+      <div id="aijam-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">AIJAM-US competition</h2>
+            <button class="modal-close" onclick="closeModal('aijam-modal')">×</button>
+          </div>
+          <div class="modal-body">
+            <div class="achievement-gallery">
+              <div class="gallery-item">
+                <img src="Ảnh\aijam 2.png" alt="Training model" class="gallery-image zoomable-image">
+                <div class="image-caption">Training data on Roboflow</div>
+              </div>
+              <div class="gallery-item">
+                <img src="Ảnh\aijam 1.png" alt="Team Presentation" class="gallery-image zoomable-image">
+                <div class="image-caption">Presenting the LeafAI project at the competition</div>
+              </div>
+            </div>
+            
+            <div class="achievement-description">
+              <h3 class="description-title">About the Achievement</h3>
+              <p class="description-text">
+                Collaborated with a team for 3 months to develop <b>LeafAI</b>, an AI-powered mobile application that detects plant diseases from leaf images. 
+          The project aimed to address real-world agricultural challenges in Vietnam by helping farmers identify and manage crop diseases early.
+          I contributed to the project’s <b>front-end development</b>, designing and implementing the user interface for the mobile app. 
+          Our research and presentation were recognized with the <b>Gold Medal</b> at the competition.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>      
+
     </section>
 
     <!-- Research & Internship Section -->
@@ -307,7 +324,7 @@
               <div class="paper-content">
                 <h3 class="paper-title">Application of Artificial Intelligence Models in Diagnosing Respiratory Diseases Through Abnormal Feature Extraction from Lung Sounds</h3>
                 <p class="paper-authors">Quang Tam Thieu, Co-authors</p>
-                <p class="paper-journal">BME INNOVATION COMPETITION 2025</p>
+                <p class="paper-journal">BME INNOVATION COMPETITION</p>
                 <p class="paper-abstract">
                   This research presents an innovative approach to respiratory disease diagnosis using machine learning algorithms to analyze lung sounds. Our model achieved superior accuracy in detecting abnormal acoustic patterns, providing a non-invasive diagnostic tool for early disease detection.
                 </p>
@@ -620,7 +637,7 @@
                     <div class="project-content-wrapper">
                         <!-- Project Header -->
                         <div class="project-header">
-                            <h3 class="project-title">Smart Reading Glasses</h3>
+                            <h3 class="project-title">SmartGlasses</h3>
                             <div class="project-meta">
                                 <span class="status-badge active">Active</span>
                                 <span class="project-type">Hardware + AI</span>
@@ -659,7 +676,7 @@
                                     <div class="video-container">
                                         <iframe 
                                             src="https://www.youtube.com/embed/jrsOZwIt-uQ" 
-                                            title="Smart Reading Glasses Demo" 
+                                            title="SmartGlasses Demo" 
                                             frameborder="0" 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                             allowfullscreen>
@@ -742,12 +759,6 @@
                         
                         <!-- Project Links -->
                         <div class="project-actions">
-                            <button class="action-btn primary">
-                                Watch Full Demo
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </button>
                             <a href="https://github.com/QuangTam1101/SmartGlasses" target="_blank" class="action-btn secondary">
                                 View Source Code
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -1163,4 +1174,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
